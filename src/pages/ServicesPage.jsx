@@ -16,7 +16,7 @@ const ServicesPage = () => {
       <main className="w-full mx-auto">
         <section className="w-full flex flex-col pt-10 pb-20 items-center justify-center gap-10 xl:py-30 xl:gap-20">
           <SectionTitle title={"服務項目"}/>
-          <div className="w-full grid grid-cols-1 place-items-center gap-6 md:grid-cols-2 lg:grid-cols-2 lg:max-w-[1296px] xl:grid-cols-4">
+          <div className="w-full grid grid-cols-1 place-items-center gap-6 md:grid-cols-2 lg:grid-cols-2 lg:max-w-[1296px] xl:px-4 xl:grid-cols-4">
             {servicesArray.map((service) => (
               <div
                 className={`${services_bg} w-[306px] py-21 flex flex-col justify-center items-center gap-6 rounded-2xl`}
