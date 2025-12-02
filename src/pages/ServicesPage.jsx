@@ -13,10 +13,10 @@ const services_bg = "bg-[url('../assets/imgs/service-bg/service-item-bg.png')]";
 const ServicesPage = () => {
   return (
     <>
-      <main className="max-w-[375px] w-full mx-auto lg:max-w-[1920px]">
-        <section className="w-full flex pt-10 pb-20 items-center justify-center gap-10 flex-col lg:py-30">
+      <main className="w-full mx-auto">
+        <section className="w-full flex flex-col pt-10 pb-20 items-center justify-center gap-10 xl:py-30 xl:gap-20">
           <SectionTitle title={"服務項目"}/>
-          <div className="w-full grid grid-cols-1 h-full justify-items-center gap-6 lg:grid-cols-4 lg:px-[312px]">
+          <div className="w-full grid grid-cols-1 place-items-center gap-6 md:grid-cols-2 lg:grid-cols-2 lg:max-w-[1296px] xl:grid-cols-4">
             {servicesArray.map((service) => (
               <div
                 className={`${services_bg} w-[306px] py-21 flex flex-col justify-center items-center gap-6 rounded-2xl`}
