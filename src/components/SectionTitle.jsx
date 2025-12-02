@@ -9,25 +9,25 @@ const SectionTitle = ({ title }) => {
         <img
           src={deco_left_sm}
           alt="services"
-          className="w-14 h-1.5 object-cover block lg:hidden"
+          className="w-14 h-1.5 object-cover block md:hidden lg:hidden"
         />
         <img
           src={deco_left_lg}
           alt="services"
-          className="w-25 h-1.5 object-cover hidden lg:block"
+          className="w-25 h-1.5 object-cover hidden md:block lg:block"
         />
-        <h2 className="h4-bold-spacing text-Primary-700 lg:h2-spacing lg:font-semibold">
+        <h2 className="h4-bold-spacing text-Primary-700 md:h2-spacing lg:h2-spacing lg:font-semibold">
           {title}
         </h2>
         <img
           src={deco_right_sm}
           alt="services"
-          className="w-14 h-1.5 object-cover block lg:hidden"
+          className="w-14 h-1.5 object-cover block md:hidden lg:hidden"
         />
         <img
           src={deco_right_lg}
           alt="services"
-          className="w-25 h-1.5 object-cover hidden lg:block"
+          className="w-25 h-1.5 object-cover hidden md:block lg:block"
         />
       </div>
     </>
