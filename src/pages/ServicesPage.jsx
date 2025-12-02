@@ -1,7 +1,4 @@
-import deco_left_sm from "../assets/imgs/icon/title deco-left-sm.svg";
-import deco_right_sm from "../assets/imgs/icon/title deco-right-sm.svg";
-import deco_left_lg from "../assets/imgs/icon/title deco-left-lg.svg";
-import deco_right_lg from "../assets/imgs/icon/title deco-right-lg.svg";
+import SectionTitle from "../components/SectionTitle"; 
 import visual_design_icon from "../assets/imgs/icon/service-item-visual.svg";
 import ui_icon from "../assets/imgs/icon/service-item-ui.svg";
 import html_css_icon from "../assets/imgs/icon/service-item-html&css.svg";
@@ -18,31 +15,7 @@ const ServicesPage = () => {
     <>
       <main className="max-w-[375px] w-full mx-auto lg:max-w-[1920px]">
         <section className="w-full flex pt-10 pb-20 items-center justify-center gap-10 flex-col lg:py-30">
-          <div className="w-full flex justify-center items-center gap-4">
-            <img
-              src={deco_left_sm}
-              alt="services"
-              className="w-14 h-1.5 object-cover block lg:hidden"
-            />
-            <img
-              src={deco_left_lg}
-              alt="services"
-              className="w-25 h-1.5 object-cover hidden lg:block"
-            />
-            <h2 className="h4-bold-spacing text-Primary-700 lg:h2-spacing">
-              服務項目
-            </h2>
-            <img
-              src={deco_right_sm}
-              alt="services"
-              className="w-14 h-1.5 object-cover block lg:hidden"
-            />
-            <img
-              src={deco_right_lg}
-              alt="services"
-              className="w-25 h-1.5 object-cover hidden lg:block"
-            />
-          </div>
+          <SectionTitle title={"服務項目"}/>
           <div className="w-full grid grid-cols-1 h-full justify-items-center gap-6 lg:grid-cols-4 lg:px-[312px]">
             {servicesArray.map((service) => (
               <div
