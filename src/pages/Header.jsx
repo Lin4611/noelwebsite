@@ -5,6 +5,7 @@ import close from '../assets/imgs/icon/close-icon.svg';
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [activeNav, setActiveNav] = useState('home'); // 先預設首頁選中
 
     return (
         <>
@@ -39,37 +40,68 @@ function Header() {
             </header>
 
             {/* 漢堡選單內容：從 header 底下開始 */}
-            <div
-                className={
-                    "fixed inset-x-0 top-14 bottom-0 z-40 bg-black/40 sm:hidden " +
-                    "transition-all duration-300 ease-out " +
-                    (isOpen
-                        ? "opacity-100  pointer-events-auto"
-                        : "opacity-0  pointer-events-none")
-                }
-            >
-                <div
-                    className={
-                        "bg-white transition-all duration-300 ease-out " +
-                        (isOpen ? "translate-y-0" : "-translate-y-2")
-                    }
-                >
-                    <nav className="flex flex-col items-center py-12 space-y-10 text-xl">
-                        <button className="px-6 py-2 border border-black/60">
-                            <span className="font-bold">首頁</span>
-                        </button>
-                        <button>作品集</button>
-                        <button>服務項目</button>
-                        <button>部落格</button>
-                        <button>聯絡我</button>
-                    </nav>
-                </div>
-            </div>
+            {isOpen && (
+        <div className="fixed inset-x-0 top-14 bottom-0 z-40 bg-black/40 sm:hidden">
+          <div className="bg-white">
+            <nav className="flex flex-col items-center py-10 gap-8 space-y-1 text-xl">
+              <NavItem
+                label="首頁"
+                active={activeNav === 'home'}
+                onClick={() => setActiveNav('home')}
+              />
+              <NavItem
+                label="作品集"
+                active={activeNav === 'works'}
+                onClick={() => setActiveNav('works')}
+              />
+              <NavItem
+                label="服務項目"
+                active={activeNav === 'services'}
+                onClick={() => setActiveNav('services')}
+              />
+              <NavItem
+                label="部落格"
+                active={activeNav === 'blog'}
+                onClick={() => setActiveNav('blog')}
+              />
+              <NavItem
+                label="聯絡我"
+                active={activeNav === 'contact'}
+                onClick={() => setActiveNav('contact')}
+              />
+            </nav>
+          </div>
+        </div>
+      )}
 
             {/* 下面只是測試區塊 */}
             <div className="w-full h-[2000px] bg-cyan-400" />
         </>
     );
+}
+
+function NavItem({ label, active, onClick }) {
+  return (
+    <button
+      onClick={onClick}
+      className="relative  fs-5-regular "
+    >
+      <span className={active ? "fs-5" : ""}>{label}</span>
+
+      {active && (
+        <>
+          {/* 左上角 */}
+          <span className="absolute -top-1 -left-2 w-2 h-2 border-t border-l border-gray-500" />
+          {/* 右上角 */}
+          <span className="absolute -top-1 -right-2 w-2 h-2 border-t border-r border-gray-500" />
+          {/* 左下角 */}
+          <span className="absolute -bottom-1 -left-2 w-2 h-2 border-b border-l border-gray-500" />
+          {/* 右下角 */}
+          <span className="absolute -bottom-1 -right-2 w-2 h-2 border-b border-r border-gray-500" />
+        </>
+      )}
+    </button>
+  );
 }
 
 export default Header;
