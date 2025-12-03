@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import logo from '../assets/imgs/logo/logo.png';
-import formIcon from '../assets/imgs/icon/instagram.svg';
-import igIcon from '../assets/imgs/icon/instagram.svg';
-import facebookIcon from '../assets/imgs/icon/facebook.svg';
+import { ListIcon, IgIcon, FbIcon } from '../components/svg-icons/FooterIcons.jsx';
 
 const bg_sm = "bg-[url('../assets/imgs/footer/footer-bg-sm.png')]";
 
 function Footer() {
-  const [activeLink, setActiveLink] = useState('form'); // form / ig / fb
+  const [activeLink, setActiveLink] = useState('form'); 
 
   return (
     <footer className={`w-full h-[538px] bg-cover ${bg_sm} px-3`}>
@@ -34,11 +32,12 @@ function Footer() {
               : 'bg-Primary-50 border-Primary-400'}`}
         >
           <div className="aspect-square w-14 flex items-center justify-center">
-            <img
-              src={formIcon}
-              alt=""
-              className={`w-[38px] transition ${activeLink === 'form' ? 'invert' : ''}`}
-            />
+                <ListIcon
+                className={`
+                    w-[38px] h-[38px] transition
+                    ${activeLink === 'form' ? 'text-Primary-50' : 'text-Primary-600'}
+                `}
+                />
           </div>
           <p
             className={`fs-5-regular ml-2 transition
@@ -58,10 +57,11 @@ function Footer() {
               : 'bg-Primary-50 border-Primary-400'}`}
         >
           <div className="aspect-square w-14 flex items-center justify-center">
-            <img
-              src={igIcon}
-              alt=""
-              className={`w-[38px] transition ${activeLink === 'ig' ? 'invert' : ''}`}
+            <IgIcon
+                className={`
+                    w-[38px] h-[38px] transition
+                    ${activeLink === 'ig' ? 'text-Primary-50' : 'text-Primary-600'}
+                `}
             />
           </div>
           <p
@@ -82,10 +82,11 @@ function Footer() {
               : 'bg-Primary-50 border-Primary-400'}`}
         >
           <div className="aspect-square w-14 flex items-center justify-center">
-            <img
-              src={facebookIcon}
-              alt=""
-              className={`w-[38px] transition ${activeLink === 'fb' ? 'invert' : ''}`}
+            <FbIcon
+            className={`
+                w-[38px] h-[38px] transition
+                ${activeLink === 'fb' ? 'text-Primary-50' : 'text-Primary-600'}
+            `}
             />
           </div>
           <p
