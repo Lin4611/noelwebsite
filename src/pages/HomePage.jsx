@@ -4,7 +4,13 @@ import ig_icon from '../assets/imgs/icon/instagram.svg';
 import facebook_icon from '../assets/imgs/icon/facebook.svg';
 import youtube_icon from '../assets/imgs/icon/youtube.svg';
 import highlight from '../assets/imgs/icon/mark.svg';
-import SectionTitle from "../components/SectionTitle";
+import SectionTitle from '../components/SectionTitle';
+import Star_travel_img from '../assets/imgs/homepage-work1/homepage-work1.png';
+import arror_icon from '../assets/imgs/icon/arrow-forward.svg';
+
+const star_travel_bg = "bg-[url('../assets/imgs/homepage-work1/homepage-work1-bg.png')]";
+const financial_bg_sm = "bg-[url('../assets/imgs/homepage-work2/homepage-work2-sm.png')]";
+const financial_bg_lg = "bg-[url('../assets/imgs/homepage-work2/homepage-work2-lg.png')]";
 
 
 function HomePage() {
@@ -51,7 +57,7 @@ function HomePage() {
 
                                             <span className="mx-2">兼</span>
 
-                                            {/* 前端工程師 */}
+
                                             <span className="relative inline-block">
                                                 <span className="relative z-10">前端工程師</span>
                                                 <img
@@ -109,9 +115,79 @@ function HomePage() {
                 </div>
             </section>
 
-            <section>
-                <SectionTitle title={"服務項目"} />
+            <div className='mt-10 mb-10'>
+                <SectionTitle title={"作品介紹"} />
+            </div>
+            
+            <section
+                className={`relative w-full bg-cover bg-center ${star_travel_bg} h-[390px] lg:h-[800px] `}>
+                <div className="absolute inset-0 bg-Primary-700/40 z-0" />
+
+                <div className=" relative z-10 max-w-[1296px] mx-auto px-4 h-full flex items-end justify-center lg:justify-between lg:items-center">
+                    <div className="flex justify-center w-full lg:w-auto lg:justify-start lg:self-end">
+                        <img className="w-[295px] lg:w-[600px] xl:w-[714px]  aspect-295/297 "
+                            src={Star_travel_img}
+                            alt="star travel img"/>
+                    </div>
+
+                    {/* 右側桌面版卡片 (lg:flex) */}
+                    <div className="hidden lg:flex lg:flex-1 justify-end">
+                        <div className="w-full max-w-[526px] h-[400px] rounded-3xl bg-Primary-50/10 backdrop-blur-sm px-10 pt-20 flex flex-col">
+                            <div className='border-b border-Primary-200 mb-10'>
+                                <h2 className="h3 text-Primary-50 mb-2">
+                                    星際旅行訂票平台
+                                </h2>
+
+                                <p className="fs-6-regular text-Primary-50 mb-6">
+                                    悠遊宇宙的夢想，從這裡開始實現
+                                </p>
+
+                                <ul className="flex flex-wrap  gap-2 mb-6">
+                                    <li className="flex items-center justify-center rounded-3xl bg-Primary-50 px-3 py-1 fs-6-regular text-Primary-700">
+                                        網頁設計
+                                    </li>
+                                    <li className="flex items-center justify-center rounded-3xl bg-Primary-50 px-3  fs-6-regular text-Primary-700">
+                                        響應式設計
+                                    </li>
+                                    <li className="flex items-center justify-center rounded-3xl bg-Primary-50 px-3  fs-6-regular text-Primary-700">
+                                        Bootstrap
+                                    </li>
+                                </ul>
+                            </div>
+                            <a
+                                href="#"
+                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-Primary-900 px-8 py-4.5 h5 text-Primary-50  hover:scale-105 mx-auto"
+                            >
+                                完整介紹
+                                <img src={arror_icon} alt="" className="w-6 h-6 invert" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
+            <div
+                className="lg:hidden mx-auto px-4">
+                <div className=" bg-Primary-50 pt-6  rounded-b-3xl flex flex-col items-center">
+                    <h2 className='h5 text-Primary-800 mb-2'>星際旅行訂票平台</h2>
+                    <p className='fs-6-regular text-Primary-600 mb-4'>悠遊宇宙的夢想，從這裡開始實現</p>
+                    <ul className="flex  justify-center gap-2 mb-5">
+                        <li className="flex items-center justify-center rounded-3xl bg-Primary-200 px-3 py-1 fs-6-regular  text-Primary-700">
+                            網頁設計
+                        </li>
+                        <li className="flex items-center justify-center rounded-3xl bg-Primary-200 px-3  fs-6-regular  text-Primary-700">
+                            響應式設計
+                        </li>
+                        <li className="flex items-center justify-center rounded-3xl bg-Primary-200 px-3  fs-6-regular  text-Primary-700">
+                            Bootstrap
+                        </li>
+                    </ul>
+
+                    <a href="#" className="inline-flex items-center justify-center gap-2 rounded-lg bg-Primary-900 px-4 py-2  fs-6 text-Primary-50 mb-12">
+                        完整介紹
+                        <img src={arror_icon} className="w-6 h-6 invert" />
+                    </a>
+                </div>
+            </div>
 
 
         </>
