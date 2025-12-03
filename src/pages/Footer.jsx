@@ -30,7 +30,7 @@ function Footer() {
           onClick={() => setActiveLink('form')}
           className={`flex items-center rounded-lg border py-[3px] pl-6 transition-colors
             ${activeLink === 'form'
-              ? 'bg-black border-black'
+              ? 'bg-Primary-900 border-black'
               : 'bg-Primary-50 border-Primary-400'}`}
         >
           <div className="aspect-square w-14 flex items-center justify-center">
@@ -42,7 +42,7 @@ function Footer() {
           </div>
           <p
             className={`fs-5-regular ml-2 transition
-              ${activeLink === 'form' ? 'text-white' : 'text-Primary-700'}`}
+              ${activeLink === 'form' ? 'text-Primary-50' : 'text-Primary-700'}`}
           >
             填寫表單
           </p>
@@ -54,7 +54,7 @@ function Footer() {
           onClick={() => setActiveLink('ig')}
           className={`flex items-center rounded-lg border py-1 pl-6 transition-colors
             ${activeLink === 'ig'
-              ? 'bg-black border-black'
+              ? 'bg-Primary-900 border-Primary-900'
               : 'bg-Primary-50 border-Primary-400'}`}
         >
           <div className="aspect-square w-14 flex items-center justify-center">
@@ -66,7 +66,7 @@ function Footer() {
           </div>
           <p
             className={`fs-5-regular ml-2 transition
-              ${activeLink === 'ig' ? 'text-white' : 'text-Primary-700'}`}
+              ${activeLink === 'ig' ? 'text-Primary-50' : 'text-Primary-700'}`}
           >
             hexschool_demo
           </p>
@@ -78,7 +78,7 @@ function Footer() {
           onClick={() => setActiveLink('fb')}
           className={`flex items-center rounded-lg border py-1 pl-6 transition-colors
             ${activeLink === 'fb'
-              ? 'bg-black border-black'
+              ? 'bg-Primary-900 border-Primary-900'
               : 'bg-Primary-50 border-Primary-400'}`}
         >
           <div className="aspect-square w-14 flex items-center justify-center">
@@ -90,7 +90,7 @@ function Footer() {
           </div>
           <p
             className={`fs-5-regular ml-2 transition
-              ${activeLink === 'fb' ? 'text-white' : 'text-Primary-700'}`}
+              ${activeLink === 'fb' ? 'text-Primary-50' : 'text-Primary-700'}`}
           >
             hexschoolTW
           </p>
