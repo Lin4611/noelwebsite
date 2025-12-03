@@ -1,10 +1,7 @@
-import ServicesPage from './pages/ServicesPage';
-
 function App() {
 
   return (
     <>
-     <ServicesPage/>
     </>
   )
 }
