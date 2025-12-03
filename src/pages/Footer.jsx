@@ -28,7 +28,7 @@ function Footer() {
         <button
           type="button"
           onClick={() => setActiveLink('form')}
-          className={`flex items-center rounded-lg border py-[3px] pl-6 transition-colors sm:py-[7px]
+          className={`flex items-center rounded-lg border py-[3px] pl-6 transition-colors sm:py-[7px] sm:hover:scale-105
             ${activeLink === 'form'
               ? 'bg-Primary-900 border-black'
               : 'bg-Primary-50 border-Primary-400'}`}
@@ -53,7 +53,7 @@ function Footer() {
         <button
           type="button"
           onClick={() => setActiveLink('ig')}
-          className={`flex items-center rounded-lg border py-1 pl-6 transition-colors sm:py-[7px]
+          className={`flex items-center rounded-lg border py-1 pl-6 transition-colors sm:py-[7px] sm:hover:scale-105
             ${activeLink === 'ig'
               ? 'bg-Primary-900 border-Primary-900'
               : 'bg-Primary-50 border-Primary-400'}`}
@@ -78,7 +78,7 @@ function Footer() {
         <button
           type="button"
           onClick={() => setActiveLink('fb')}
-          className={`flex items-center rounded-lg border py-1 pl-6 transition-colors sm:py-[7px]
+          className={`flex items-center rounded-lg border py-1 pl-6 transition-colors sm:py-[7px] sm:hover:scale-105
             ${activeLink === 'fb'
               ? 'bg-Primary-900 border-Primary-900'
               : 'bg-Primary-50 border-Primary-400'}`}
