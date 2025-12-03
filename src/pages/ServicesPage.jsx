@@ -50,7 +50,7 @@ const priceArray = [
   { id: 2, iconUrl: pirce_ui_icon, title: "UI設計", price: "15,000" },
   { id: 3, iconUrl: price_frontend_icon, title: "前端開發", price: "22,000" },
 ];
-const cutstomerCases = [
+const customerCases = [
   {
     id: 1,
     imgUrl: casePos,
@@ -165,24 +165,24 @@ const ServicesPage = () => {
         <section className="w-full flex flex-col gap-10 py-20 items-center justify-center lg:py-30">
           <SectionTitle title={"客戶案例"} />
           <div className="w-full grid grid-cols-1 place-items-center gap-12 px-3 lg:grid-cols-2 lg:max-w-[1296px] lg:gap-x-6 lg:gap-y-20">
-            {cutstomerCases.map((cutstomercase) => (
-              <div className="w-full flex flex-col gap-4 max-w-[636px]" key={cutstomercase.id}>
+            {customerCases.map((customercase) => (
+              <div className="w-full flex flex-col gap-4 max-w-[636px]" key={customercase.id}>
                 <img
-                  src={cutstomercase.imgUrl}
-                  alt={cutstomercase.title}
+                  src={customercase.imgUrl}
+                  alt={customercase.title}
                   className="max-w-[636px] max-h-[400px] w-full h-auto object-cover rounded-md"
                 />
                 <div className="w-full flex flex-col items-center justify-center gap-4 px-4">
                   <div className="w-full flex flex-col justify-center gap-2">
                     <h4 className="h5 text-Primary-700 whitespace-nowrap">
-                      {cutstomercase.title}
+                      {customercase.title}
                     </h4>
                     <p className="fs-6 text-Primary-500">
-                      {cutstomercase.description}
+                      {customercase.description}
                     </p>
                   </div>
                   <div className="w-full flex items-center gap-2">
-                    {cutstomercase.categories.map((category,index)=>(
+                    {customercase.categories.map((category,index)=>(
                           <div className="flex items-center justify-center bg-Primary-200 rounded-2xl px-3 py-1" key={index}>
                             <p className="fs-6 text-Primary-700">{category}</p>
                           </div>
