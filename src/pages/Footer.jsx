@@ -10,7 +10,7 @@ function Footer() {
   const [activeLink, setActiveLink] = useState('form'); // form / ig / fb
 
   return (
-    <footer className={`w-full h-[538px] bg-cover ${bg_sm}`}>
+    <footer className={`w-full h-[538px] bg-cover ${bg_sm} px-3`}>
       {/* 上面文字區 */}
       <div className="pt-10 w-full flex flex-col items-center">
         <img src={logo} alt="footerLogo" className="h-auto shrink-0 mb-6" />
