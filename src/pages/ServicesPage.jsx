@@ -80,6 +80,28 @@ const customerCases = [
     categories: ["網頁設計", "切版服務", "Javascript"],
   },
 ];
+const faqs = [
+  {
+    id: 1,
+    title: "時程很趕的話可以加快作業嗎？",
+    content: "每提早一天，只要支付總報價的 5%，我們即會視為急件為您趕工！",
+  },
+  {
+    id: 2,
+    title: "白天可以開會討論嗎？",
+    content: "每週一三五的白天，可以約定開會時間！",
+  },
+  {
+    id: 3,
+    title: "有實際開發的網站可以參考嗎？",
+    content: "請填寫表單或來信索取，部分合作有簽保密協定，無法於網路上公開喔。",
+  },
+  {
+    id: 4,
+    title: "提供比稿服務嗎？",
+    content: "只要支付費用，設計提供比稿服務，但切版與前端開發恕不提供該服務內容。",
+  },
+];
 const services_bg = "bg-[url('../assets/imgs/service-bg/service-item-bg.png')]";
 const process_bg =
   "bg-[url('../assets/imgs/service-bg/process-bg.png')] bg-[length:100%_100%]";
@@ -166,7 +188,10 @@ const ServicesPage = () => {
           <SectionTitle title={"客戶案例"} />
           <div className="w-full grid grid-cols-1 place-items-center gap-12 px-3 lg:grid-cols-2 lg:max-w-[1296px] lg:gap-x-6 lg:gap-y-20">
             {customerCases.map((customercase) => (
-              <div className="w-full flex flex-col gap-4 max-w-[636px]" key={customercase.id}>
+              <div
+                className="w-full flex flex-col gap-4 max-w-[636px]"
+                key={customercase.id}
+              >
                 <img
                   src={customercase.imgUrl}
                   alt={customercase.title}
@@ -182,13 +207,27 @@ const ServicesPage = () => {
                     </p>
                   </div>
                   <div className="w-full flex items-center gap-2">
-                    {customercase.categories.map((category,index)=>(
-                          <div className="flex items-center justify-center bg-Primary-200 rounded-2xl px-3 py-1" key={index}>
-                            <p className="fs-6 text-Primary-700">{category}</p>
-                          </div>
-                      ))}
+                    {customercase.categories.map((category, index) => (
+                      <div
+                        className="flex items-center justify-center bg-Primary-200 rounded-2xl px-3 py-1"
+                        key={index}
+                      >
+                        <p className="fs-6 text-Primary-700">{category}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="w-full flex flex-col gap-10 py-20 items-center justify-center lg:py-30">
+          <SectionTitle title={"常見問題"} />
+          <div className="w-full grid grid-cols-1 place-items-center gap-6 px-5 lg:grid-cols-2 lg:max-w-[1076px]">
+            {faqs.map(faq=>(
+              <div className="w-full h-full flex flex-col justify-center gap-4 border border-Primary-300 rounded-lg p-6 max-w-[526px] max-h-[141px]" key={faq.id}>
+                <h4 className="h5 text-Primary-700">{faq.title}</h4>
+                <p className="fs-6 text-Primary-600 font-normal">{faq.content}</p>
               </div>
             ))}
           </div>
