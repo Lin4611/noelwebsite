@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import logo from '../assets/imgs/logo/logo.png';
-import { ListIcon, IgIcon, FbIcon } from '../components/svg-icons/FooterIcons.jsx';
+import { ListIcon, IgIcon, FbIcon } from './svg-icons/FooterIcons.jsx';
 
 const bg_sm = "bg-[url('../assets/imgs/footer/footer-bg-sm.png')]";
 const bg_lg = "sm:bg-[url('../assets/imgs/footer/footer-bg-lg.png')]";
