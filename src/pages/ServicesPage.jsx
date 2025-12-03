@@ -7,6 +7,11 @@ import arrow_down_icon from "../assets/imgs/icon/arrow-downward.svg";
 import price_visual_icon from "../assets/imgs/icon/price-item-visual.svg";
 import pirce_ui_icon from "../assets/imgs/icon/price-item-ui.svg";
 import price_frontend_icon from "../assets/imgs/icon/price-item-front-end.svg";
+import casePos from "../assets/imgs/work-image/work-image4.png";
+import caseBrandSite from "../assets/imgs/work-image/work-image5.png";
+import caseMovie from "../assets/imgs/work-image/work-image6.png";
+import caseOrange from "../assets/imgs/work-image/work-image7.png";
+
 const servicesArray = [
   { id: 1, title: "平面設計", iconUrl: visual_design_icon },
   { id: 2, title: "UI 設計", iconUrl: ui_icon },
@@ -44,6 +49,36 @@ const priceArray = [
   { id: 1, iconUrl: price_visual_icon, title: "平面設計", price: "6,000" },
   { id: 2, iconUrl: pirce_ui_icon, title: "UI設計", price: "15,000" },
   { id: 3, iconUrl: price_frontend_icon, title: "前端開發", price: "22,000" },
+];
+const cutstomerCases = [
+  {
+    id: 1,
+    imgUrl: casePos,
+    title: "美美美早餐店 POS 機 UI Design",
+    description: "訂單送單一目瞭然，自動報表分析好輕鬆",
+    categories: ["UI 設計", "前端開發", "Wix"],
+  },
+  {
+    id: 2,
+    imgUrl: caseBrandSite,
+    title: "巧克巧克形象官網設計",
+    description: "三步驟完成訂票，電腦手機都支援",
+    categories: ["UI 設計", "設計系統", "網路電商"],
+  },
+  {
+    id: 3,
+    imgUrl: caseMovie,
+    title: "電影院訂票系統",
+    description: "三步驟完成訂票，電腦手機都支援",
+    categories: ["前端開發", "後端支援", "Vue"],
+  },
+  {
+    id: 4,
+    imgUrl: caseOrange,
+    title: "2023 餉茶坊飲料旗艦店活動官網設計",
+    description: "主打水果主題，冰鎮夏天暑氣",
+    categories: ["網頁設計", "切版服務", "Javascript"],
+  },
 ];
 const services_bg = "bg-[url('../assets/imgs/service-bg/service-item-bg.png')]";
 const process_bg =
@@ -100,7 +135,7 @@ const ServicesPage = () => {
             ))}
           </div>
         </section>
-        <section className="w-full flex flex-col gap-10 py-20 items-center justify-center">
+        <section className="w-full flex flex-col gap-10 py-20 items-center justify-center lg:py-30">
           <SectionTitle title={"價格表"} />
           <div className="w-full grid grid-cols-1 gap-6 place-items-center px-[27px] lg:grid-cols-2 lg:max-w-[1296px] xl:grid-cols-3">
             {priceArray.map((priceItem) => (
@@ -118,8 +153,41 @@ const ServicesPage = () => {
                 </div>
                 <div className="max-w-[41px] w-full border border-Primary-400"></div>
                 <div className="flex items-baseline gap-1">
-                  <h3 className="h4-bold text-Primary-800">{priceItem.price}</h3>
+                  <h3 className="h4-bold text-Primary-800">
+                    {priceItem.price}
+                  </h3>
                   <p className="fs-6 text-Primary-600">起</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="w-full flex flex-col gap-10 py-20 items-center justify-center lg:py-30">
+          <SectionTitle title={"客戶案例"} />
+          <div className="w-full grid grid-cols-1 place-items-center gap-12 px-3 lg:grid-cols-2 lg:max-w-[1296px] lg:gap-x-6 lg:gap-y-20">
+            {cutstomerCases.map((cutstomercase) => (
+              <div className="w-full flex flex-col gap-4 max-w-[636px]" key={cutstomercase.id}>
+                <img
+                  src={cutstomercase.imgUrl}
+                  alt={cutstomercase.title}
+                  className="max-w-[636px] max-h-[400px] w-full h-auto object-cover rounded-md"
+                />
+                <div className="w-full flex flex-col items-center justify-center gap-4 px-4">
+                  <div className="w-full flex flex-col justify-center gap-2">
+                    <h4 className="h5 text-Primary-700 whitespace-nowrap">
+                      {cutstomercase.title}
+                    </h4>
+                    <p className="fs-6 text-Primary-500">
+                      {cutstomercase.description}
+                    </p>
+                  </div>
+                  <div className="w-full flex items-center gap-2">
+                    {cutstomercase.categories.map((category,index)=>(
+                          <div className="flex items-center justify-center bg-Primary-200 rounded-2xl px-3 py-1" key={index}>
+                            <p className="fs-6 text-Primary-700">{category}</p>
+                          </div>
+                      ))}
+                  </div>
                 </div>
               </div>
             ))}
