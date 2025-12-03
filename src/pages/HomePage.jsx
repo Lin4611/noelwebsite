@@ -1,5 +1,8 @@
-import hero_sm from "../assets/imgs/hero-image/hero-sm.png"
-import hero_lg from "../assets/imgs/hero-image/hero-lg.png"
+import hero_sm from '../assets/imgs/hero-image/hero-sm.png';
+import hero_lg from '../assets/imgs/hero-image/hero-lg.png';
+import ig_icon from '../assets/imgs/icon/instagram.svg';
+import facebook_icon from '../assets/imgs/icon/facebook.svg';
+import youtube_icon from '../assets/imgs/icon/youtube.svg';
 
 function HomePage(){
     return(
@@ -25,6 +28,17 @@ function HomePage(){
                             <span className="block sm:inline">WEB DEVELOPMENT / BRANDING /</span>
                             <span className="block sm:inline">UI / UX / APP DESIGN</span> 
                         </p>
+                        <div className='flex'>
+                            <a href="#">
+                                <img src={ig_icon}  />
+                            </a>
+                            <a href="#">
+                                <img src={facebook_icon}  />
+                            </a>
+                            <a href="#">
+                                <img src={youtube_icon}  />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
