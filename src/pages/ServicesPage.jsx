@@ -184,7 +184,7 @@ const ServicesPage = () => {
             ))}
           </div>
         </section>
-        <section className="w-full flex flex-col gap-10 py-20 items-center justify-center lg:py-30">
+        <section className="w-full flex flex-col gap-10 py-20 items-center justify-center bg-Primary-100 lg:py-30 lg:gap-20">
           <SectionTitle title={"客戶案例"} />
           <div className="w-full grid grid-cols-1 place-items-center gap-12 px-3 lg:grid-cols-2 lg:max-w-[1296px] lg:gap-x-6 lg:gap-y-20">
             {customerCases.map((customercase) => (
