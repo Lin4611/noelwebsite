@@ -170,8 +170,8 @@ const BlogPage = () => {
               ))
             )}
           </section>
-          <ul className="hidden w-full flex-col items-center gap-8 px-3 py-5 bg-Primary-100 lg:flex max-w-[306px]">
-            <li
+          <ul className="hidden w-full flex-col items-center gap-8 px-3 py-5 bg-Primary-100 max-w-[306px] rounded-lg lg:flex">
+            <li 
               className={`fs-6 font-normal whitespace-nowrap ${
                 category === "all"
                   ? " border-b border-Primary-800"
