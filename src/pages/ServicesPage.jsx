@@ -178,7 +178,9 @@ const ServicesPage = () => {
                     alt={priceItem.title}
                     className="w-10 h-10"
                   />
-                  <h3 className="h5 text-Primary-800 md:h3 md:leading-[42px] lg:h3 lg:leading-[42px]">{priceItem.title}</h3>
+                  <h3 className="h5 text-Primary-800 md:h3 md:leading-[42px] lg:h3 lg:leading-[42px]">
+                    {priceItem.title}
+                  </h3>
                 </div>
                 <div className="max-w-[41px] w-full border border-Primary-400"></div>
                 <div className="flex items-baseline gap-1">
@@ -236,7 +238,9 @@ const ServicesPage = () => {
                 className="w-full h-full flex flex-col gap-4 border border-Primary-300 rounded-lg p-6 max-w-[526px] max-h-[141px]"
                 key={faq.id}
               >
-                <h4 className="h5 text-Primary-700 md:h4-bold lg:h4-bold">{faq.title}</h4>
+                <h4 className="h5 text-Primary-700 md:h4-bold lg:h4-bold">
+                  {faq.title}
+                </h4>
                 <p className="fs-6 text-Primary-600 font-normal lg:fs-5 lg:font-normal">
                   {faq.content}
                 </p>
