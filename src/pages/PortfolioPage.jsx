@@ -1,6 +1,21 @@
 import quoteLeft from '../assets/imgs/icon/quote-left.svg';
 import quoteRight from '../assets/imgs/icon/quote-right.svg';
 import highlight from '../assets/imgs/icon/mark.svg';
+import star_travel_img from '../assets/imgs/work-image/work-image1.png'
+import financial_img from '../assets/imgs/work-image/work-image2.png'
+import beauty_clinic_img from '../assets/imgs/work-image/work-image3.png'
+import breakfast_store_img from '../assets/imgs/work-image/work-image4.png'
+import theater_img from '../assets/imgs/work-image/work-image5.png'
+import chocchoc_img from '../assets/imgs/work-image/work-image6.png'
+
+const portfolioArticles = [
+    { id: 1, title: "星際旅行訂票平台",content:"悠遊宇宙的夢想，從這裡開始實現", imgUrl: star_travel_img, date: "2024/02/10", categories: ["UI/UX 新知"], },
+    { id: 2, title: "理財App",content:"連動帳戶與行動支付，讓 AI 提供您最好的理財建議", imgUrl: financial_img, date: "2023/11/20", categories: ["UI/UX 新知"], },
+    { id: 3, title: "醫美診所官網",content:"永保青春的秘密，從粹究開始", imgUrl: beauty_clinic_img, date: "2023/10/18", categories: ["UI/UX 新知"], },
+    { id: 4, title: "美美美早餐店 POS 機 UI Design",content:"訂單送單一目瞭然，自動報表分析好輕鬆", imgUrl: breakfast_store_img, date: "2023/10/18", categories: ["UI/UX 新知"], },
+    { id: 5, title: "電影院訂票系統",content:"三步驟完成訂票，電腦手機都支援", imgUrl: theater_img, date: "2023/10/18", categories: ["UI/UX 新知"], },
+    { id: 6, title: "巧克巧克形象官網設計",content:"三步驟完成訂票，電腦手機都支援", imgUrl:  chocchoc_img, date: "2023/10/18", categories: ["UI/UX 新知"], },
+];
 
 function PortfolioPage(){
     return(
@@ -9,7 +24,7 @@ function PortfolioPage(){
                 <div
                     className="
                     relative
-                    max-w-[840px] lg:max-w-[670px]
+                    max-w-[840px] lg:max-w-[636px]
                     mx-auto px-3
                     py-16 lg:py-24
                     pt-26
@@ -64,7 +79,7 @@ function PortfolioPage(){
                                 src={quoteRight}
                                 alt=""
                                 aria-hidden
-                                className="hidden lg:block absolute  w-16 h-16"
+                                className="hidden lg:block absolute -right-22 top-2 w-16 h-16"
                                 />
                         </span>
                         </p>
