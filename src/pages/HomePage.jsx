@@ -118,19 +118,17 @@ function HomePage() {
             <div className='mt-10 mb-10'>
                 <SectionTitle title={"作品介紹"} />
             </div>
-            
+
             <section
                 className={`relative w-full bg-cover bg-center ${star_travel_bg} h-[390px] lg:h-[800px] `}>
                 <div className="absolute inset-0 bg-Primary-700/40 z-0" />
 
                 <div className=" relative z-10 max-w-[1296px] mx-auto px-4 h-full flex items-end justify-center lg:justify-between lg:items-center">
                     <div className="flex justify-center w-full lg:w-auto lg:justify-start lg:self-end">
-                        <img className="w-[295px] lg:w-[600px] xl:w-[714px]  aspect-295/297 "
-                            src={Star_travel_img}
-                            alt="star travel img"/>
+                        <img className="w-[295px] lg:w-[600px] xl:w-[714px]  aspect-295/297 " src={Star_travel_img} alt="star travel img" />
                     </div>
 
-                    {/* 右側桌面版卡片 (lg:flex) */}
+
                     <div className="hidden lg:flex lg:flex-1 justify-end">
                         <div className="w-full max-w-[526px] h-[400px] rounded-3xl bg-Primary-50/10 backdrop-blur-sm px-10 pt-20 flex flex-col">
                             <div className='border-b border-Primary-200 mb-10'>
@@ -154,10 +152,7 @@ function HomePage() {
                                     </li>
                                 </ul>
                             </div>
-                            <a
-                                href="#"
-                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-Primary-900 px-8 py-4.5 h5 text-Primary-50  hover:scale-105 mx-auto"
-                            >
+                            <a href="#" className="inline-flex items-center justify-center gap-2 rounded-lg bg-Primary-900 px-8 py-4.5 h5 text-Primary-50  hover:scale-105 mx-auto">
                                 完整介紹
                                 <img src={arror_icon} alt="" className="w-6 h-6 invert" />
                             </a>
@@ -191,39 +186,32 @@ function HomePage() {
 
             <section
                 className={`relative w-full bg-cover bg-center ${financial_bg_sm} ${financial_bg_lg} h-[390px] lg:h-[800px] `}>
-
-
+                <div className="hidden lg:block pointer-events-none absolute inset-y-0 -left-2 w-1/2 bg-black/40" />
                 <div className=" relative z-10 max-w-[1296px] mx-auto px-4 h-full flex items-end justify-center lg:justify-between lg:items-center">
- 
-
-
-                    <div className="hidden lg:flex lg:flex-1 justify-end">
-                        <div className="w-full max-w-[526px] h-[400px] rounded-3xl bg-Primary-50/10 backdrop-blur-sm px-10 pt-20 flex flex-col">
+                    <div className="hidden lg:flex lg:flex-1 justify-start">
+                        <div className="xl:w-full md:max-w-[380px] lg:max-w-[526px] h-[400px] rounded-3xl bg-Primary-50/10 backdrop-blur-sm px-10 pt-20 flex flex-col">
                             <div className='border-b border-Primary-200 mb-10'>
                                 <h2 className="h3 text-Primary-50 mb-2">
-                                    星際旅行訂票平台
+                                    理財APP
                                 </h2>
 
                                 <p className="fs-6-regular text-Primary-50 mb-6">
-                                    悠遊宇宙的夢想，從這裡開始實現
+                                    連動帳戶與行動支付，讓 AI 提供您最好的理財建議
                                 </p>
 
                                 <ul className="flex flex-wrap  gap-2 mb-6">
                                     <li className="flex items-center justify-center rounded-3xl bg-Primary-50 px-3 py-1 fs-6-regular text-Primary-700">
-                                        網頁設計
+                                        APP設計
                                     </li>
                                     <li className="flex items-center justify-center rounded-3xl bg-Primary-50 px-3  fs-6-regular text-Primary-700">
-                                        響應式設計
+                                        iOS
                                     </li>
                                     <li className="flex items-center justify-center rounded-3xl bg-Primary-50 px-3  fs-6-regular text-Primary-700">
-                                        Bootstrap
+                                        React
                                     </li>
                                 </ul>
                             </div>
-                            <a
-                                href="#"
-                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-Primary-900 px-8 py-4.5 h5 text-Primary-50  hover:scale-105 mx-auto"
-                            >
+                            <a href="#" className="inline-flex items-center justify-center gap-2 rounded-lg bg-Primary-900 px-8 py-4.5 h5 text-Primary-50  hover:scale-105 mx-auto">
                                 完整介紹
                                 <img src={arror_icon} alt="" className="w-6 h-6 invert" />
                             </a>
@@ -254,6 +242,8 @@ function HomePage() {
                     </a>
                 </div>
             </div>
+
+            
         </>
     );
 }
