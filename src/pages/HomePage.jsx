@@ -26,15 +26,15 @@ const home_service_bg = "lg:bg-[url('../assets/imgs/homepage-service/homepage-se
 
 
 const servicesArray = [
-  { id: 1, title: "平面設計", iconUrl: visual_design_icon },
-  { id: 2, title: "UI 設計", iconUrl: ui_icon },
-  { id: 3, title: "切版服務", iconUrl: html_css_icon },
-  { id: 4, title: "前端開發", iconUrl: front_end_icon },
+    { id: 1, title: "平面設計", iconUrl: visual_design_icon },
+    { id: 2, title: "UI 設計", iconUrl: ui_icon },
+    { id: 3, title: "切版服務", iconUrl: html_css_icon },
+    { id: 4, title: "前端開發", iconUrl: front_end_icon },
 ];
 const featuredArticles = [
-  { id: 1, title: "Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)", imgUrl: vision_pro_img, date: "2024/02/10",categories:["UI/UX 新知"], },
-  { id: 2, title: "UI 給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (下)", imgUrl: figma_context_a_img, date: "2023/11/20",categories:["UI/UX 新知"], },
-  { id: 3, title: "給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)", imgUrl: figma_context_b_img,  date: "2023/10/18", categories:["UI/UX 新知"],},
+    { id: 1, title: "Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)", imgUrl: vision_pro_img, date: "2024/02/10", categories: ["UI/UX 新知"], },
+    { id: 2, title: "UI 給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (下)", imgUrl: figma_context_a_img, date: "2023/11/20", categories: ["UI/UX 新知"], },
+    { id: 3, title: "給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)", imgUrl: figma_context_b_img, date: "2023/10/18", categories: ["UI/UX 新知"], },
 ];
 const services_bg = "bg-[url('../assets/imgs/service-bg/service-item-bg.png')]";
 
@@ -46,7 +46,7 @@ function HomePage() {
                 <div className="max-w-[1296px] mx-auto   ">
 
                     <div className="flex flex-col lg:flex-row lg:items-center lg:gap-6 ">
-                        {/* 右邊圖（手機時在上方，所以 order-1 / order-2） */}
+
                         <div className="order-1 lg:order-2 w-full lg:flex-1 lg:mr-[calc(50%-50vw)] ">
                             <picture>
                                 <source srcSet={hero_lg} media="(min-width: 1024px)" />
@@ -337,7 +337,7 @@ function HomePage() {
                 <div className="max-w-[1296px] mx-auto px-4 pt-20 pb-10 xl:pt-30 ">
 
                     <div className="mb-10 xl:mb-20">
-                    <SectionTitle title="服務項目" />
+                        <SectionTitle title="服務項目" />
                     </div>
 
 
@@ -346,19 +346,19 @@ function HomePage() {
                     md:grid-cols-2
                     xl:grid-cols-4
                     ">
-                    {servicesArray.map(service => (
-                        <div
-                        key={service.id}
-                        className={`${services_bg} w-[306px] py-21 flex flex-col items-center justify-center gap-6 rounded-2xl`}
-                        >
-                        <img
-                            src={service.iconUrl}
-                            alt={service.title}
-                            className="w-20 h-auto aspect-square"
-                        />
-                        <h3 className="h4-bold text-Primary-50">{service.title}</h3>
-                        </div>
-                    ))}
+                        {servicesArray.map(service => (
+                            <div
+                                key={service.id}
+                                className={`${services_bg} w-[306px] py-21 flex flex-col items-center justify-center gap-6 rounded-2xl`}
+                            >
+                                <img
+                                    src={service.iconUrl}
+                                    alt={service.title}
+                                    className="w-20 h-auto aspect-square"
+                                />
+                                <h3 className="h4-bold text-Primary-50">{service.title}</h3>
+                            </div>
+                        ))}
                     </div>
 
 
@@ -380,9 +380,9 @@ function HomePage() {
 
             <section>
                 <div className="mt-20  xl:mt-30">
-                <SectionTitle title="精選文章" />
+                    <SectionTitle title="精選文章" />
                 </div>
-                
+
                 <div className="max-w-[1296px] mx-auto px-3 pt-10 pb-10 xl:pt-20 ">
 
 
@@ -392,45 +392,45 @@ function HomePage() {
                             md:grid-cols-2
                             xl:grid-cols-3
                         "
-                        >
+                    >
                         {featuredArticles.map((article) => (
                             <div
-                            key={article.id}
-                            className="w-full  bg-Primary-50  overflow-hidden  mx-auto"
+                                key={article.id}
+                                className="w-full  bg-Primary-50  overflow-hidden  mx-auto"
                             >
-                            <img
-                                src={article.imgUrl}
-                                alt={article.title}
-                                className="w-full rounded-2xl aspect-[351/234] lg:aspect-[416/234] object-cover"
-                            />
+                                <img
+                                    src={article.imgUrl}
+                                    alt={article.title}
+                                    className="w-full rounded-2xl aspect-[351/234] lg:aspect-[416/234] object-cover"
+                                />
 
-                           <div className="px-2 pt-4 pb-6">
-                                <h3 className="h5 font-semibold text-Primary-800 mb-2">
-                                    {article.title}
-                                </h3>
+                                <div className="px-2 pt-4 pb-6">
+                                    <h3 className="h5 font-semibold text-Primary-800 mb-2">
+                                        {article.title}
+                                    </h3>
 
-                                {/* 分類＋日期 */}
-                                <div className="mt-4 flex items-center justify-between">
-                                    <div className="flex flex-wrap gap-2">
-                                    {article.categories.map((category, index) => (
-                                        <span
-                                        key={index}
-                                        className="inline-flex items-center justify-center rounded-2xl bg-Primary-200 px-3 py-1 fs-6-regular text-Primary-700"
-                                        >
-                                        {category}
+                                    {/* 分類＋日期 */}
+                                    <div className="mt-4 flex items-center justify-between">
+                                        <div className="flex flex-wrap gap-2">
+                                            {article.categories.map((category, index) => (
+                                                <span
+                                                    key={index}
+                                                    className="inline-flex items-center justify-center rounded-2xl bg-Primary-200 px-3 py-1 fs-6-regular text-Primary-700"
+                                                >
+                                                    {category}
+                                                </span>
+                                            ))}
+                                        </div>
+
+                                        {/* 右邊：日期 */}
+                                        <span className="fs-6-regular text-Primary-600 whitespace-nowrap">
+                                            {article.date}
                                         </span>
-                                    ))}
                                     </div>
-
-                                    {/* 右邊：日期 */}
-                                    <span className="fs-6-regular text-Primary-600 whitespace-nowrap">
-                                    {article.date}
-                                    </span>
-                                </div>
                                 </div>
                             </div>
                         ))}
-                        </div>
+                    </div>
 
 
                     <div className=" mb-12 flex flex-col items-center ">
@@ -441,15 +441,15 @@ function HomePage() {
                             <img src={arror_icon} className="w-6 h-6 invert" alt="arror_icon" />
                         </a>
                         <ul className="hidden md:flex justify-center items-center gap-4 pb-10">
-                        {Array.from({ length: 5 }).map((cur, index) => (
-                            <li
-                            key={index}
-                            className={`
+                            {Array.from({ length: 5 }).map((cur, index) => (
+                                <li
+                                    key={index}
+                                    className={`
                                 h-3 w-3 rounded-full list-none
                                 ${index === 0 ? "bg-black" : "bg-Primary-300"}
                             `}
-                            />
-                        ))}
+                                />
+                            ))}
                         </ul>
                     </div>
                 </div>
