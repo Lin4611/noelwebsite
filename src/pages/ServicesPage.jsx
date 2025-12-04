@@ -228,16 +228,16 @@ const ServicesPage = () => {
             ))}
           </div>
         </section>
-        <section className="w-full flex flex-col gap-10 py-20 items-center justify-center lg:py-30">
+        <section className="w-full flex flex-col gap-10 py-20 items-center justify-center lg:gap-20 lg:py-30">
           <SectionTitle title={"常見問題"} />
           <div className="w-full grid grid-cols-1 place-items-center gap-6 px-5 lg:grid-cols-2 lg:max-w-[1076px]">
             {faqs.map((faq) => (
               <div
-                className="w-full h-full flex flex-col justify-center gap-4 border border-Primary-300 rounded-lg p-6 max-w-[526px] max-h-[141px]"
+                className="w-full h-full flex flex-col gap-4 border border-Primary-300 rounded-lg p-6 max-w-[526px] max-h-[141px]"
                 key={faq.id}
               >
                 <h4 className="h5 text-Primary-700 md:h4-bold lg:h4-bold">{faq.title}</h4>
-                <p className="fs-6 text-Primary-600 font-normal">
+                <p className="fs-6 text-Primary-600 font-normal lg:fs-5 lg:font-normal">
                   {faq.content}
                 </p>
               </div>
