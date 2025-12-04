@@ -23,7 +23,7 @@ const blogArticles = [
 const BlogContentPage = () => {
   return (
     <>
-      <main className="w-full mx-auto pb-20 flex flex-col items-center justify-center gap-10">
+      <main className="w-full mx-auto pb-20 flex flex-col items-center justify-center gap-10 px-3 lg:px-10">
         <ul className="w-full flex items-center gap-8 px-3 py-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] bg-Primary-100 lg:hidden">
           <li className="fs-6 font-normal whitespace-nowrap border-b border-Primary-800">
             <button type="button">全部文章</button>
@@ -41,23 +41,26 @@ const BlogContentPage = () => {
             <button type="button">前端開發</button>
           </li>
         </ul>
-        <section className="w-full gap-6 flex lg:max-w-[1296px]">
-          <section className="w-full flex flex-col items-center justify-center gap-6 px-3">
-            <div className="w-full flex flex-col gap-4">
-              <div className="w-full flex items-center justify-between">
+        <section className="w-full gap-[134px] flex lg:max-w-[1296px] lg:py-30">
+          <section className="w-full flex flex-col items-center justify-center gap-6 px-3 lg:gap-16 lg:px-0">
+            <div className="w-full flex flex-col gap-4 lg:gap-10">
+              <div className="w-full flex items-center justify-between sm:justify-start sm:gap-4">
                 <p className="fs-6 font-normal text-Primary-500">
                   數位產品設計
                 </p>
+                <p className="fs-6 font-normal text-Primary-500 hidden lg:block">/</p>
                 <p className="fs-6 font-normal text-Primary-500">
                   2023/09/20 發佈
                 </p>
               </div>
-              <div className="w-full px-3">
-                <div className="w-full flex flex-col items-center justify-center gap-4">
-                  <h1 className="h4-bold text-Primary-700 text-center">
+              <div className="w-full px-3 lg:px-15">
+                <div className="w-full flex flex-col items-center justify-center gap-4 lg:gap-6">
+                  <h1 className="h4-bold text-Primary-700 text-center lg:h2">
                     虛擬實境 (VR) 介面設計對使用者沈浸感影響的研究
                   </h1>
-                  <h2 className="h6">- 探索虛擬實境技術的現狀與前景 -</h2>
+                  <h2 className="h6 text-Primary-700 lg:h4-regular ">
+                    - 探索虛擬實境技術的現狀與前景 -
+                  </h2>
                 </div>
               </div>
             </div>
@@ -74,7 +77,7 @@ const BlogContentPage = () => {
                 響，以期為優化VR技術的使用者體驗提 供參考。
               </p>
               <section className="w-full flex flex-col gap-4">
-                <h3 className="h5 text-Primary-700">大眾看法</h3>
+                <h3 className="h5 text-Primary-700 lg:h4-bold">大眾看法</h3>
                 <p className="fs-5 font-normal text-Primary-700">
                   虛擬實境技術近年來受到越來越多人的
                   關注和接受。人們對VR技術的潛力持樂
@@ -85,7 +88,7 @@ const BlogContentPage = () => {
                 </p>
               </section>
               <section className="w-full flex flex-col gap-4">
-                <h3 className="h5 text-Primary-700">現行產品</h3>
+                <h3 className="h5 text-Primary-700 lg:h4-bold">現行產品</h3>
                 <p className="fs-5 font-normal text-Primary-700">
                   目前市面上有許多虛擬實境產品，如 Vision Pro、Oculus Rift、HTC
                   Vive、 PlayStation VR等。這些產品在硬件性
@@ -95,7 +98,7 @@ const BlogContentPage = () => {
                   響使用者的操作方式、感知真實度以及 沈浸感。
                 </p>
               </section>
-              <div className="w-full flex flex-col gap-8">
+              <div className="w-full grid grid-cols-1 gap-8 place-items-center lg:grid-cols-2">
                 <figure className="max-w-[416px] w-full flex flex-col items-center justify-center gap-2">
                   <img
                     src={vision_pro_pic}
@@ -138,7 +141,7 @@ const BlogContentPage = () => {
                 </figure>
               </div>
               <div className="w-full flex flex-col gap-4">
-                <h3 className="h5 text-Primary-700">技術創新</h3>
+                <h3 className="h5 text-Primary-700 lg:h4-bold">技術創新</h3>
                 <div className="w-full">
                   <p className="fs-5 font-normal text-Primary-700">
                     隨著硬件技術的不斷進步，VR設備的性
@@ -161,7 +164,7 @@ const BlogContentPage = () => {
                 </div>
               </div>
               <div className="w-full flex flex-col gap-4">
-                <h3 className="h5 text-Primary-700">技術瓶頸</h3>
+                <h3 className="h5 text-Primary-700 lg:h4-bold">技術瓶頸</h3>
                 <p className="fs-5 font-normal text-Primary-700">
                   儘管虛擬實境技術取得了巨大進步，但
                   仍然存在一些技術瓶頸需要克服。例
@@ -172,7 +175,7 @@ const BlogContentPage = () => {
                 </p>
               </div>
               <div className="w-full flex flex-col gap-4">
-                <h3 className="h5 text-Primary-700">未來展望</h3>
+                <h3 className="h5 text-Primary-700 lg:h4-bold">未來展望</h3>
                 <p className="fs-5 font-normal text-Primary-700">
                   未來，虛擬實境技術將繼續向前發展。
                   我們可以期待更加先進的硬件設備和更
@@ -188,57 +191,57 @@ const BlogContentPage = () => {
                 Noel 主筆
               </p>
             </div>
-            <div className="w-full flex flex-col items-center justify-center gap-10 px-[33.5px]">
-              <h2 className="h4-bold text-Primary-700">相關文章</h2>
-              <div className="w-full flex flex-col gap-10">
-                {blogArticles.map((blogarticle) => (
-                  <div
-                    className="w-full flex flex-col gap-4 justify-center bg-Primary-50 lg:flex-row lg:items-start lg:justify-start"
-                    key={blogarticle.id}
-                  >
-                    <img
-                      src={blogarticle.imgUrl}
-                      alt={blogarticle.title}
-                      className="w-[306px] h-[220px] object-cover border border-Primary-200 rounded-lg"
-                    />
-                    <div className="w-full flex flex-col items-center justify-center gap-4 px-2 max-w-[306px] sm:max-w-full">
-                      <div className="w-full flex items-center justify-between sm:justify-start sm:gap-4">
-                        <p className="fs-6 font-normal text-Primary-600">
-                          {blogarticle.date}
-                        </p>
-                        <div className="flex items-center justify-center bg-Primary-200 rounded-2xl px-3 py-1">
-                          <p className="fs-6 text-Primary-700">
-                            {blogarticle.category}
-                          </p>
-                        </div>
-                      </div>
-                      <h2 className="h5 text-Primary-700 font-semibold">
-                        {blogarticle.title}
-                      </h2>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </section>
-          <ul className="hidden w-full flex-col items-center gap-8 px-3 py-5 bg-Primary-100 max-w-[306px] rounded-lg lg:flex">
-            <li className="fs-6 font-normal whitespace-nowrap border-b border-Primary-800">
+          <ul className="hidden w-full flex-col items-start gap-8 pl-17 pt-15 px-3 py-5 bg-Primary-100 max-w-[306px] rounded-lg lg:flex">
+            <li className="fs-5 font-normal whitespace-nowrap border-b border-Primary-800">
               <button type="button">全部文章</button>
             </li>
-            <li className="fs-6 font-normal whitespace-nowrap text-Primary-600">
+            <li className="fs-5 font-normal whitespace-nowrap text-Primary-600">
               <button type="button">UI/UX 新知</button>
             </li>
-            <li className="fs-6 font-normal whitespace-nowrap text-Primary-600">
+            <li className="fs-5 font-normal whitespace-nowrap text-Primary-600">
               <button type="button">數位產品設計</button>
             </li>
-            <li className="fs-6 font-normal whitespace-nowrap text-Primary-600">
+            <li className="fs-5 font-normal whitespace-nowrap text-Primary-600">
               <button type="button">平面設計</button>
             </li>
-            <li className="fs-6 font-normal whitespace-nowrap text-Primary-600">
+            <li className="fs-5 font-normal whitespace-nowrap text-Primary-600">
               <button type="button">前端開發</button>
             </li>
           </ul>
         </section>
+        <div className="w-full flex flex-col items-center justify-center gap-10 px-[22.5px] border-t border-Primary-400 max-w-[1296px] pt-10 pb-20 lg:items-start">
+          <h2 className="h4-bold text-Primary-700">相關文章</h2>
+          <div className="w-full grid grid-cols-1 gap-10 place-items-center md:grid-cols-2 lg:grid-cols-2 lg:max-w-[856px] md:gap-4 lg:gap-4">
+            {blogArticles.map((blogarticle) => (
+              <div
+                className="w-full flex flex-col gap-4 justify-center bg-Primary-50 items-center"
+                key={blogarticle.id}
+              >
+                <img
+                  src={blogarticle.imgUrl}
+                  alt={blogarticle.title}
+                  className="w-full h-[220px] object-cover border border-Primary-200 rounded-lg max-w-[416px]"
+                />
+                <div className="w-full flex flex-col items-center justify-center gap-4 px-2 max-w-[416px] lg:flex-col-reverse">
+                  <div className="w-full flex items-center justify-between lg:flex-row-reverse">
+                    <p className="fs-6 font-normal text-Primary-600">
+                      {blogarticle.date}
+                    </p>
+                    <div className="flex items-center justify-center bg-Primary-200 rounded-2xl px-3 py-1">
+                      <p className="fs-6 text-Primary-700">
+                        {blogarticle.category}
+                      </p>
+                    </div>
+                  </div>
+                  <h2 className="h5 text-Primary-700 font-semibold">
+                    {blogarticle.title}
+                  </h2>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </main>
     </>
   );
