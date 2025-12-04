@@ -8,12 +8,26 @@ import SectionTitle from '../components/SectionTitle';
 import Star_travel_img from '../assets/imgs/homepage-work1/homepage-work1.png';
 import arror_icon from '../assets/imgs/icon/arrow-forward.svg';
 import beauty_clinic_img from '../assets/imgs/homepage-work3/homepage-work3.png';
+import visual_design_icon from "../assets/imgs/icon/service-item-visual.svg";
+import ui_icon from "../assets/imgs/icon/service-item-ui.svg";
+import html_css_icon from "../assets/imgs/icon/service-item-html&css.svg";
+import front_end_icon from "../assets/imgs/icon/service-item-front-end.svg";
+
+
 
 const star_travel_bg = "bg-[url('../assets/imgs/homepage-work1/homepage-work1-bg.png')]";
 const financial_bg_sm = "bg-[url('../assets/imgs/homepage-work2/homepage-work2-sm.png')]";
 const financial_bg_lg = "lg:bg-[url('../assets/imgs/homepage-work2/homepage-work2-lg.png')]";
 const beauty_clinic_bg = "bg-[url('../assets/imgs/homepage-work3/homepage-work3-bg.png')]";
+const home_service_bg = "lg:bg-[url('../assets/imgs/homepage-service/homepage-services-bg.png')]";
 
+const servicesArray = [
+  { id: 1, title: "平面設計", iconUrl: visual_design_icon },
+  { id: 2, title: "UI 設計", iconUrl: ui_icon },
+  { id: 3, title: "切版服務", iconUrl: html_css_icon },
+  { id: 4, title: "前端開發", iconUrl: front_end_icon },
+];
+const services_bg = "bg-[url('../assets/imgs/service-bg/service-item-bg.png')]";
 
 function HomePage() {
     return (
@@ -309,6 +323,51 @@ function HomePage() {
                     </a>
                 </div>
             </div>
+
+            <section className={`w-full bg-Primary-100 ${home_service_bg} `}>
+                <div className="max-w-[1296px] mx-auto px-4 pt-20 pb-10 xl:pt-30 ">
+
+                    <div className="mb-10 xl:mb-20">
+                    <SectionTitle title="服務項目" />
+                    </div>
+
+
+                    <div className="
+                    grid grid-cols-1 gap-6 place-items-center pb-10 xl:pb-20
+                    md:grid-cols-2
+                    xl:grid-cols-4
+                    ">
+                    {servicesArray.map(service => (
+                        <div
+                        key={service.id}
+                        className={`${services_bg} w-[306px] py-21 flex flex-col items-center justify-center gap-6 rounded-2xl`}
+                        >
+                        <img
+                            src={service.iconUrl}
+                            alt={service.title}
+                            className="w-20 h-auto aspect-square"
+                        />
+                        <h3 className="h4-bold text-Primary-50">{service.title}</h3>
+                        </div>
+                    ))}
+                    </div>
+
+
+                    <div className=" mb-12 flex flex-col items-center">
+                        <h3 className="h5 xl:h3 font-semibold text-center mb-6 xl:mb-20 text-Primary-700">
+                            想要合作或瞭解更多？
+                        </h3>
+
+                        <a
+                            href="#"
+                            className="inline-flex items-center justify-center gap-2 rounded-md bg-Primary-900 px-4 py-2 xl:py-4 xl:px-8 fs-6 xl:fs-5 text-Primary-50"
+                        >
+                            詳細內容與合作流程
+                            <img src={arror_icon} className="w-6 h-6 invert" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </section>
         </>
     );
 }
