@@ -99,7 +99,8 @@ const faqs = [
   {
     id: 4,
     title: "提供比稿服務嗎？",
-    content: "只要支付費用，設計提供比稿服務，但切版與前端開發恕不提供該服務內容。",
+    content:
+      "只要支付費用，設計提供比稿服務，但切版與前端開發恕不提供該服務內容。",
   },
 ];
 const services_bg = "bg-[url('../assets/imgs/service-bg/service-item-bg.png')]";
@@ -114,7 +115,7 @@ const ServicesPage = () => {
           <div className="w-full grid grid-cols-1 place-items-center gap-6 md:grid-cols-2 lg:grid-cols-2 lg:max-w-[1296px] xl:px-4 xl:grid-cols-4">
             {servicesArray.map((service) => (
               <div
-                className={`${services_bg} w-[306px] py-21 flex flex-col justify-center items-center gap-6 rounded-2xl`}
+                className={`${services_bg} w-[306px] py-21 flex flex-col justify-center items-center gap-6 rounded-2xl hover:scale-110 hover:transition-all hover:duration-300`}
                 key={service.id}
               >
                 <img
@@ -122,25 +123,31 @@ const ServicesPage = () => {
                   alt={service.title}
                   className="w-20 h-auto aspect-square"
                 />
-                <h3 className="h4-bold text-Primary-50">{service.title}</h3>
+                <h3 className="h4-bold text-Primary-50 md:h3 md:leading-[42px] lg:h3 lg:leading-[42px]">
+                  {service.title}
+                </h3>
               </div>
             ))}
           </div>
         </section>
         <section
-          className={`w-full flex flex-col py-20 items-center justify-center gap-10 ${process_bg}`}
+          className={`w-full flex flex-col py-20 items-center justify-center gap-10 ${process_bg} lg:py-30`}
         >
           <SectionTitle title={"服務流程"} fontColor="text-Primary-50" />
           <div className="w-full grid grid-cols-1 place-items-center gap-4 px-3 md:max-w-[655px] lg:max-w-[655px]">
             {processArray.map((process) => (
               <>
                 <div
-                  className="w-full grid grid-cols-1 place-items-center bg-Primary-700 border border-Primary-500 pt-6 pb-12 px-6"
+                  className="w-full flex flex-col items-center justify-center bg-Primary-700 border border-Primary-500 pt-6 pb-12 px-6 gap-2 md:px-8 md:py-6 md:gap-8 md:flex-row lg:px-8 lg:py-6 lg:gap-8 lg:flex-row"
                   key={process.id}
                 >
-                  <h2 className="number-sm text-Primary-500">{process.id}</h2>
-                  <div className="w-full flex flex-col items-center justify-center gap-2">
-                    <h3 className="h4-bold text-Primary-50">{process.title}</h3>
+                  <h2 className="number-sm text-Primary-500 md:number-lg lg:number-lg">
+                    {process.id}
+                  </h2>
+                  <div className="w-full flex flex-col items-center justify-center gap-2 md:items-start lg:items-start">
+                    <h3 className="h4-bold text-Primary-50 md:h3 lg:h3">
+                      {process.title}
+                    </h3>
                     <p className="fs-5 text-Primary-300 font-normal">
                       {process.content}
                     </p>
@@ -171,11 +178,13 @@ const ServicesPage = () => {
                     alt={priceItem.title}
                     className="w-10 h-10"
                   />
-                  <h3 className="h5 text-Primary-800">{priceItem.title}</h3>
+                  <h3 className="h5 text-Primary-800 md:h3 md:leading-[42px] lg:h3 lg:leading-[42px]">
+                    {priceItem.title}
+                  </h3>
                 </div>
                 <div className="max-w-[41px] w-full border border-Primary-400"></div>
                 <div className="flex items-baseline gap-1">
-                  <h3 className="h4-bold text-Primary-800">
+                  <h3 className="h4-bold text-Primary-800 md:h2 md:leading-12 lg:h2 lg:leading-12">
                     {priceItem.price}
                   </h3>
                   <p className="fs-6 text-Primary-600">起</p>
@@ -189,7 +198,7 @@ const ServicesPage = () => {
           <div className="w-full grid grid-cols-1 place-items-center gap-12 px-3 lg:grid-cols-2 lg:max-w-[1296px] lg:gap-x-6 lg:gap-y-20">
             {customerCases.map((customercase) => (
               <div
-                className="w-full flex flex-col gap-4 max-w-[636px]"
+                className="w-full flex flex-col gap-4 max-w-[636px] hover:scale-105 hover:transition-all hover:duration-300"
                 key={customercase.id}
               >
                 <img
@@ -199,7 +208,7 @@ const ServicesPage = () => {
                 />
                 <div className="w-full flex flex-col items-center justify-center gap-4 px-4">
                   <div className="w-full flex flex-col justify-center gap-2">
-                    <h4 className="h5 text-Primary-700 whitespace-nowrap">
+                    <h4 className="h5 text-Primary-700 whitespace-nowrap md:h3 lg:h3">
                       {customercase.title}
                     </h4>
                     <p className="fs-6 text-Primary-500">
@@ -221,13 +230,20 @@ const ServicesPage = () => {
             ))}
           </div>
         </section>
-        <section className="w-full flex flex-col gap-10 py-20 items-center justify-center lg:py-30">
+        <section className="w-full flex flex-col gap-10 py-20 items-center justify-center lg:gap-20 lg:py-30">
           <SectionTitle title={"常見問題"} />
           <div className="w-full grid grid-cols-1 place-items-center gap-6 px-5 lg:grid-cols-2 lg:max-w-[1076px]">
-            {faqs.map(faq=>(
-              <div className="w-full h-full flex flex-col justify-center gap-4 border border-Primary-300 rounded-lg p-6 max-w-[526px] max-h-[141px]" key={faq.id}>
-                <h4 className="h5 text-Primary-700">{faq.title}</h4>
-                <p className="fs-6 text-Primary-600 font-normal">{faq.content}</p>
+            {faqs.map((faq) => (
+              <div
+                className="w-full h-full flex flex-col gap-4 border border-Primary-300 rounded-lg p-6 max-w-[526px] max-h-[141px]"
+                key={faq.id}
+              >
+                <h4 className="h5 text-Primary-700 md:h4-bold lg:h4-bold">
+                  {faq.title}
+                </h4>
+                <p className="fs-6 text-Primary-600 font-normal lg:fs-5 lg:font-normal">
+                  {faq.content}
+                </p>
               </div>
             ))}
           </div>
