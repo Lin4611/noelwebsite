@@ -247,11 +247,11 @@ function HomePage() {
 
             <section
                 className={`relative w-full  bg-cover   bg-position-[70%_center]  ${beauty_clinic_bg} h-[390px] lg:h-[800px] `}>
-                <div className="absolute inset-0 bg-Primary-700/40 z-0" />
+                <div className="absolute inset-0 bg-Primary-700/50 z-0" />
 
                 <div className=" relative z-10 max-w-[1296px] mx-auto px-4 h-full flex items-center justify-center lg:justify-between ">
                     <div className="flex justify-center w-full lg:w-auto lg:justify-start ">
-                        <img className="w-[295px] lg:w-[600px] xl:w-[714px]  aspect-295/210 " src={beauty_clinic_img} alt="beauty clinic img" />
+                        <img className="w-[295px] lg:w-[600px] xl:w-[721px]  aspect-295/210 " src={beauty_clinic_img} alt="beauty clinic img" />
                     </div>
 
 
