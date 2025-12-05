@@ -9,7 +9,7 @@ const WebRouter = () => {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Services" element={<ServicesPage />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:id" element={<BlogContentPage />} /> 
         <Route path="/portfolio" element={<PortfolioPage />} />
