@@ -146,7 +146,7 @@ const BlogPage = () => {
             {tagList.map((tag) => (
               <>
                 <li
-                  className={`fs-6 font-normal whitespace-nowrap ${
+                  className={`fs-6 font-normal whitespace-nowrap hover:scale-110 hover:transition-all hover:duration-300 ${
                     category === tag
                       ? " border-b border-Primary-800"
                       : "border-none text-Primary-600"
