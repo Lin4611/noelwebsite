@@ -140,7 +140,7 @@ function HomePage() {
                 </div>
             </section>
 
-            <div className='mt-10 mb-10'>
+            <div className='mt-10 mb-10 xl:mb-20'>
                 <SectionTitle title={"作品介紹"} />
             </div>
 
@@ -165,7 +165,7 @@ function HomePage() {
                                     悠遊宇宙的夢想，從這裡開始實現
                                 </p>
 
-                                <ul className="flex flex-wrap  gap-2 mb-6">
+                                <ul className="flex flex-wrap  gap-2 mb-10">
                                     <li className="flex items-center justify-center rounded-3xl bg-Primary-50 px-3 py-1 fs-6-regular text-Primary-700">
                                         網頁設計
                                     </li>
@@ -224,7 +224,7 @@ function HomePage() {
                                     連動帳戶與行動支付，讓 AI 提供您最好的理財建議
                                 </p>
 
-                                <ul className="flex flex-wrap  gap-2 mb-6">
+                                <ul className="flex flex-wrap  gap-2 mb-10">
                                     <li className="flex items-center justify-center rounded-3xl bg-Primary-50 px-3 py-1 fs-6-regular text-Primary-700">
                                         APP設計
                                     </li>
@@ -289,7 +289,7 @@ function HomePage() {
                                     永保青春的秘密，從粹究開始
                                 </p>
 
-                                <ul className="flex flex-wrap  gap-2 mb-6">
+                                <ul className="flex flex-wrap  gap-2 mb-10">
                                     <li className="flex items-center justify-center rounded-3xl bg-Primary-50 px-3 py-1 fs-6-regular text-Primary-700">
                                         網頁設計
                                     </li>
@@ -363,13 +363,13 @@ function HomePage() {
 
 
                     <div className=" mb-10 flex flex-col items-center">
-                        <h3 className="h5 xl:h3 font-semibold text-center mb-6 xl:mb-20 text-Primary-700">
+                        <h3 className="h5 xl:h3 font-semibold text-center mb-6 xl:mb-10 text-Primary-700">
                             想要合作或瞭解更多？
                         </h3>
 
                         <a
                             href="#"
-                            className="inline-flex items-center justify-center gap-2 rounded-md bg-Primary-900 px-4 py-2 xl:py-4 xl:px-8 fs-6 xl:fs-5 text-Primary-50"
+                            className="inline-flex items-center justify-center gap-2 rounded-md bg-Primary-900 px-4 py-2 xl:py-4 xl:px-8 fs-6 xl:fs-5 text-Primary-50 hover:scale-120"
                         >
                             詳細內容與合作流程
                             <img src={arror_icon} className="w-6 h-6 invert" alt="" />
