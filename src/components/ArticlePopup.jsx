@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import close_icon from "../assets/imgs/icon/close-icon.svg";
 import main_vision_pic from "../assets/imgs/modal-image/modal-image1.png";
 import recommand_search_pic from "../assets/imgs/modal-image/modal-image2.png";
@@ -15,13 +16,24 @@ const infoArray = [
     desription: "給予最快起飛，以及最熱門的景點推薦，協助使用者進行選擇。",
   },
 ];
-const ArticlePopup = () => {
+const ArticlePopup = ({ isOpen, onClose }) => {
+  // 禁止背景滾動
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
+
+  if (!isOpen) return null;
   return (
     <>
       <div className="w-full max-w-[1076px] flex flex-col items-center justify-center bg-Primary-50 rounded-2xl pb-10 lg:pb-20">
         <button
           type="button"
           className="w-full flex items-end justify-end pt-8 pr-8"
+          onClick={onClose}
         >
           <img
             src={close_icon}

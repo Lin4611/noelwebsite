@@ -1,38 +1,78 @@
-import quoteLeft from '../assets/imgs/icon/quote-left.svg';
-import quoteRight from '../assets/imgs/icon/quote-right.svg';
-import highlight from '../assets/imgs/icon/mark.svg';
-import star_travel_img from '../assets/imgs/work-image/work-image1.png'
-import financial_img from '../assets/imgs/work-image/work-image2.png'
-import beauty_clinic_img from '../assets/imgs/work-image/work-image3.png'
-import breakfast_store_img from '../assets/imgs/work-image/work-image4.png'
-import theater_img from '../assets/imgs/work-image/work-image5.png'
-import chocchoc_img from '../assets/imgs/work-image/work-image6.png'
-
+import quoteLeft from "../assets/imgs/icon/quote-left.svg";
+import quoteRight from "../assets/imgs/icon/quote-right.svg";
+import highlight from "../assets/imgs/icon/mark.svg";
+import star_travel_img from "../assets/imgs/work-image/work-image1.png";
+import financial_img from "../assets/imgs/work-image/work-image2.png";
+import beauty_clinic_img from "../assets/imgs/work-image/work-image3.png";
+import breakfast_store_img from "../assets/imgs/work-image/work-image4.png";
+import theater_img from "../assets/imgs/work-image/work-image5.png";
+import chocchoc_img from "../assets/imgs/work-image/work-image6.png";
+import ArticlePopup from "../components/ArticlePopup";
+import { useState } from "react";
 const portfolioArticles = [
-    { id: 1, title: "星際旅行訂票平台",content:"悠遊宇宙的夢想，從這裡開始實現", imgUrl: star_travel_img, categories: ["網頁設計", "響應式設計", "Bootstrap"], },
-    { id: 2, title: "理財App",content:"連動帳戶與行動支付，讓 AI 提供您最好的理財建議", imgUrl: financial_img, categories: ["APP設計", "iOS", "React"], },
-    { id: 3, title: "醫美診所官網",content:"永保青春的秘密，從粹究開始", imgUrl: beauty_clinic_img, categories: ["網頁設計", "響應式設計", "Bootstrap"], },
-    { id: 4, title: "美美美早餐店 POS 機 UI Design",content:"訂單送單一目瞭然，自動報表分析好輕鬆", imgUrl: breakfast_store_img, categories: ["UI 設計", "前端開發", "Wix"], },
-    { id: 5, title: "電影院訂票系統",content:"三步驟完成訂票，電腦手機都支援", imgUrl: theater_img, categories: ["前端開發", "後端支援", "Vue"], },
-    { id: 6, title: "巧克巧克形象官網設計",content:"三步驟完成訂票，電腦手機都支援", imgUrl:  chocchoc_img, categories: ["UI設計", "設計系統", "網路電商"], },
+  {
+    id: 1,
+    title: "星際旅行訂票平台",
+    content: "悠遊宇宙的夢想，從這裡開始實現",
+    imgUrl: star_travel_img,
+    categories: ["網頁設計", "響應式設計", "Bootstrap"],
+  },
+  {
+    id: 2,
+    title: "理財App",
+    content: "連動帳戶與行動支付，讓 AI 提供您最好的理財建議",
+    imgUrl: financial_img,
+    categories: ["APP設計", "iOS", "React"],
+  },
+  {
+    id: 3,
+    title: "醫美診所官網",
+    content: "永保青春的秘密，從粹究開始",
+    imgUrl: beauty_clinic_img,
+    categories: ["網頁設計", "響應式設計", "Bootstrap"],
+  },
+  {
+    id: 4,
+    title: "美美美早餐店 POS 機 UI Design",
+    content: "訂單送單一目瞭然，自動報表分析好輕鬆",
+    imgUrl: breakfast_store_img,
+    categories: ["UI 設計", "前端開發", "Wix"],
+  },
+  {
+    id: 5,
+    title: "電影院訂票系統",
+    content: "三步驟完成訂票，電腦手機都支援",
+    imgUrl: theater_img,
+    categories: ["前端開發", "後端支援", "Vue"],
+  },
+  {
+    id: 6,
+    title: "巧克巧克形象官網設計",
+    content: "三步驟完成訂票，電腦手機都支援",
+    imgUrl: chocchoc_img,
+    categories: ["UI設計", "設計系統", "網路電商"],
+  },
 ];
 
-function PortfolioPage(){
-    return(
-        <>
-    <section className="w-full bg-Primary-100">
+function PortfolioPage() {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <>
+      <section className="w-full bg-Primary-100">
         <div
           className="
             relative
             max-w-[840px] lg:max-w-[670px]  
             mx-auto px-3
             py-12 lg:py-24
-            pt-30">
+            pt-30"
+        >
           <img
             src={quoteLeft}
             alt=""
             aria-hidden
-            className="absolute top-10 left-1/2 -translate-x-1/2 w-16 h-16 lg:left-20 lg:top-12 lg:-translate-x-1/2"/>
+            className="absolute top-10 left-1/2 -translate-x-1/2 w-16 h-16 lg:left-20 lg:top-12 lg:-translate-x-1/2"
+          />
           <img
             src={quoteRight}
             alt=""
@@ -55,7 +95,8 @@ function PortfolioPage(){
                       absolute left-0 bottom-0
                       w-full
                       scale-x-120 scale-y-130
-                      -translate-y-1"/>
+                      -translate-y-1"
+                  />
                 </span>
               </p>
 
@@ -72,7 +113,8 @@ function PortfolioPage(){
                       absolute left-0 bottom-0
                       w-full
                       scale-x-120 scale-y-130
-                      -translate-y-1"/>
+                      -translate-y-1"
+                  />
                 </span>
               </p>
             </div>
@@ -108,56 +150,81 @@ function PortfolioPage(){
             </div>
           </div>
         </div>
-    </section>
+      </section>
 
-    <section className="w-full bg-Primary-50">
+      <section className="w-full bg-Primary-50">
         <div className="max-w-[1296px] mx-auto px-3 pt-20 pb-12 xl:pt-30 xl:px-0 xl:pb-30">
-            <div
+          <div
             className="
-                grid grid-cols-1 gap-12 pb-10 xl:pb-18 md:gap-6 md:grid-cols-2">
+                grid grid-cols-1 gap-12 pb-10 xl:pb-18 md:gap-6 md:grid-cols-2"
+          >
             {portfolioArticles.map((work) => (
-                <article
+              <article
                 key={work.id}
                 className="w-full bg-Primary-50  overflow-hidden mx-auto"
-                >
+                onClick={() => setIsOpen(!isOpen)}
+              >
                 <img
-                    src={work.imgUrl}
-                    alt={work.title}
-                    className="
+                  src={work.imgUrl}
+                  alt={work.title}
+                  className="
                     w-full object-cover rounded-sm md:rounded-l-lg
                     aspect-351/224  
-                    md:aspect-636/400 "/>
+                    md:aspect-636/400 "
+                />
 
                 <div className="px-4 pt-4 ">
-                    <h3 className="h5  text-Primary-700 mb-2 md:h3">
+                  <h3 className="h5  text-Primary-700 mb-2 md:h3">
                     {work.title}
-                    </h3>
+                  </h3>
 
-                    <p className="fs-6-regular text-Primary-500 mb-4">
+                  <p className="fs-6-regular text-Primary-500 mb-4">
                     {work.content}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
+                  </p>
+                  <div className="flex flex-wrap gap-2">
                     {work.categories.map((category, index) => (
-                        <span
+                      <span
                         key={index}
                         className="inline-flex items-center justify-center rounded-2xl bg-Primary-200 px-3 py-1 fs-6-regular text-Primary-700 "
-                        >
+                      >
                         {category}
-                        </span>
+                      </span>
                     ))}
-                    </div>
+                  </div>
                 </div>
-                </article>
+              </article>
             ))}
-            </div>
-            <div class="flex gap-4 justify-center">
-                <button class="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-800 text-Primary-50 xl:hover:scale-110">1</button>
-                <button class="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-50 text-Primary-700 xl:hover:scale-110">2</button>
-                <button class="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-50 text-Primary-700 xl:hover:scale-110">3</button>
-            </div>
+          </div>
+          <div class="flex gap-4 justify-center">
+            <button class="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-800 text-Primary-50 xl:hover:scale-110">
+              1
+            </button>
+            <button class="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-50 text-Primary-700 xl:hover:scale-110">
+              2
+            </button>
+            <button class="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-50 text-Primary-700 xl:hover:scale-110">
+              3
+            </button>
+          </div>
         </div>
-    </section>
-        </>
-    );
-};
+      </section>
+      <section
+        className={`${
+          isOpen ? "flex" : "hidden"
+        } fixed inset-0 z-50 items-center justify-center px-3 bg-Primary-900/60 backdrop-blur-sm transition-opacity duration-300 ${
+          isOpen ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className={`max-h-[90vh] overflow-y-auto transform transition-all duration-300 ${
+            isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"
+          }`}
+        >
+          <ArticlePopup isOpen={isOpen} onClose={() => setIsOpen(false)} />
+        </div>
+      </section>
+    </>
+  );
+}
 export default PortfolioPage;
