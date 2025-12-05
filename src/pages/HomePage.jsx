@@ -369,7 +369,7 @@ function HomePage() {
 
                         <a
                             href="#"
-                            className="inline-flex items-center justify-center gap-2 rounded-md bg-Primary-900 px-4 py-2 xl:py-4 xl:px-8 fs-6 xl:fs-5 text-Primary-50"
+                            className="inline-flex items-center justify-center gap-2 rounded-md bg-Primary-900 px-4 py-2 xl:py-4 xl:px-8 fs-6 xl:fs-5 text-Primary-50 hover:scale-120"
                         >
                             詳細內容與合作流程
                             <img src={arror_icon} className="w-6 h-6 invert" alt="" />
