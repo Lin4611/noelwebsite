@@ -1,12 +1,12 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import HomePage from "./pages/HomePage";
-import PortfolioPage from "./pages/PortfolioPage";
+import WebRouter from "./router/WebRouter";
 function App() {
   return (
     <>
-      {/* <Header /> */}
-      {/* <Footer /> */}
+      <Header />
+      <WebRouter />
+      <Footer />
     </>
   );
 }
