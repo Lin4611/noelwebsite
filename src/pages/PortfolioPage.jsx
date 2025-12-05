@@ -161,7 +161,7 @@ function PortfolioPage() {
             {portfolioArticles.map((work) => (
               <article
                 key={work.id}
-                className="w-full bg-Primary-50  overflow-hidden mx-auto"
+                className="w-full bg-Primary-50  overflow-hidden mx-auto hover:scale-105 hover:cursor-pointer"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <img
