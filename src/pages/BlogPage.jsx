@@ -6,6 +6,7 @@ import article_vr_research_pic from "../assets/imgs/article-image/article-image4
 import article_team_meeting_pic from "../assets/imgs/article-image/article-image5.png";
 import article_coffee_pic from "../assets/imgs/article-image/article-image6.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const blogArticles = [
   {
     id: 1,
@@ -140,7 +141,11 @@ const BlogPage = () => {
               <h2 className="h2-spacing text-Primary-700">此分類目前沒文章 </h2>
             ) : (
               filterBlogArticles.map((blogarticle) => (
-                <div className="w-full flex flex-col gap-4 justify-center bg-Primary-50 lg:flex-row lg:items-start lg:justify-start" key={blogarticle.id}>
+                <Link
+                  className="w-full flex flex-col gap-4 justify-center bg-Primary-50 hover:scale-110 transform-all duration-300 lg:flex-row lg:items-start lg:justify-start"
+                  key={blogarticle.id}
+                  to={`/blog/${blogarticle.id}`}
+                >
                   <img
                     src={blogarticle.imgUrl}
                     alt={blogarticle.title}
@@ -166,12 +171,12 @@ const BlogPage = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))
             )}
           </section>
           <ul className="hidden w-full flex-col items-center gap-8 px-3 py-5 bg-Primary-100 max-w-[306px] rounded-lg lg:flex">
-            <li 
+            <li
               className={`fs-6 font-normal whitespace-nowrap ${
                 category === "all"
                   ? " border-b border-Primary-800"
