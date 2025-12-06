@@ -4,6 +4,7 @@ import htc_vive_pic from "../assets/imgs/article-content-image/HTC Vive.png";
 import playstations_vr_pic from "../assets/imgs/article-content-image/PlayStation VR.png";
 import article_vr_pre_pic from "../assets/imgs/article-image/article-image1.png";
 import article_uiux_future_pic from "../assets/imgs/article-image/article-image7.png";
+import { Link } from "react-router-dom";
 const blogArticles = [
   {
     id: 1,
@@ -20,26 +21,32 @@ const blogArticles = [
     title: "Vision Pro 來了！UIUX 設計師的未來在哪裡？",
   },
 ];
+const tagList = [
+  "全部文章",
+  "UI/UX 新知",
+  "數位產品設計",
+  "平面設計",
+  "前端開發",
+];
 const BlogContentPage = () => {
   return (
     <>
       <main className="w-full mx-auto pb-20 flex flex-col items-center justify-center gap-10 px-3 lg:px-10">
-        <ul className="w-full flex items-center gap-8 px-3 py-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] bg-Primary-100 lg:hidden">
-          <li className="fs-6 font-normal whitespace-nowrap border-b border-Primary-800">
-            <button type="button">全部文章</button>
-          </li>
-          <li className="fs-6 font-normal whitespace-nowrap text-Primary-600">
-            <button type="button">UI/UX 新知</button>
-          </li>
-          <li className="fs-6 font-normal whitespace-nowrap text-Primary-600">
-            <button type="button">數位產品設計</button>
-          </li>
-          <li className="fs-6 font-normal whitespace-nowrap text-Primary-600">
-            <button type="button">平面設計</button>
-          </li>
-          <li className="fs-6 font-normal whitespace-nowrap text-Primary-600">
-            <button type="button">前端開發</button>
-          </li>
+        <ul className="w-full flex items-center gap-8 px-3 py-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] bg-Primary-100 sticky top-14 z-40 sm:top-24 md:top-24 lg:hidden">
+          {tagList.map((tag) => (
+            <>
+              <li
+                className={`fs-6 font-normal whitespace-nowrap ${
+                  tag === "全部文章"
+                    ? " border-b border-Primary-800"
+                    : "border-none text-Primary-600"
+                }`}
+                key={tag}
+              >
+                <button type="button">{tag}</button>
+              </li>
+            </>
+          ))}
         </ul>
         <section className="w-full gap-[134px] flex lg:max-w-[1296px] lg:py-30">
           <section className="w-full flex flex-col items-center justify-center gap-6 px-3 lg:gap-16 lg:px-0">
@@ -48,7 +55,9 @@ const BlogContentPage = () => {
                 <p className="fs-6 font-normal text-Primary-500">
                   數位產品設計
                 </p>
-                <p className="fs-6 font-normal text-Primary-500 hidden lg:block">/</p>
+                <p className="fs-6 font-normal text-Primary-500 hidden lg:block">
+                  /
+                </p>
                 <p className="fs-6 font-normal text-Primary-500">
                   2023/09/20 發佈
                 </p>
@@ -192,22 +201,23 @@ const BlogContentPage = () => {
               </p>
             </div>
           </section>
-          <ul className="hidden w-full flex-col items-start gap-8 pl-17 pt-15 px-3 py-5 bg-Primary-100 max-w-[306px] rounded-lg lg:flex">
-            <li className="fs-5 font-normal whitespace-nowrap border-b border-Primary-800">
-              <button type="button">全部文章</button>
-            </li>
-            <li className="fs-5 font-normal whitespace-nowrap text-Primary-600">
-              <button type="button">UI/UX 新知</button>
-            </li>
-            <li className="fs-5 font-normal whitespace-nowrap text-Primary-600">
-              <button type="button">數位產品設計</button>
-            </li>
-            <li className="fs-5 font-normal whitespace-nowrap text-Primary-600">
-              <button type="button">平面設計</button>
-            </li>
-            <li className="fs-5 font-normal whitespace-nowrap text-Primary-600">
-              <button type="button">前端開發</button>
-            </li>
+          <ul className="hidden w-full flex-col items-center gap-8 px-3 py-5 bg-Primary-100 max-w-[306px] rounded-lg lg:flex">
+            {tagList.map((tag) => (
+              <>
+                <li
+                  className={`fs-6 font-normal whitespace-nowrap hover:scale-110 hover:transition-all hover:duration-300 ${
+                    tag === '全部文章'
+                      ? " border-b border-Primary-800"
+                      : "border-none text-Primary-600"
+                  }`}
+                  key={tag}
+                >
+                  <button type="button">
+                    {tag}
+                  </button>
+                </li>
+              </>
+            ))}
           </ul>
         </section>
         <div className="w-full flex flex-col items-center justify-center gap-10 px-[22.5px] border-t border-Primary-400 max-w-[1296px] pt-10 pb-20 lg:items-start">
