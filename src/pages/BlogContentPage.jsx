@@ -35,16 +35,17 @@ const BlogContentPage = () => {
         <ul className="w-full flex items-center gap-8 px-3 py-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] bg-Primary-100 sticky top-14 z-40 sm:top-24 md:top-24 lg:hidden">
           {tagList.map((tag) => (
             <>
-              <li
-                className={`fs-6 font-normal whitespace-nowrap ${
-                  tag === "全部文章"
-                    ? " border-b border-Primary-800"
-                    : "border-none text-Primary-600"
-                }`}
-                key={tag}
-              >
-                <button type="button">{tag}</button>
-              </li>
+              <Link to="/blog" state={{ category: tag }} key={tag}>
+                <li
+                  className={`fs-6 font-normal whitespace-nowrap ${
+                    tag === "全部文章"
+                      ? " border-b border-Primary-800"
+                      : "border-none text-Primary-600"
+                  }`}
+                >
+                  <button type="button">{tag}</button>
+                </li>
+              </Link>
             </>
           ))}
         </ul>
@@ -204,18 +205,17 @@ const BlogContentPage = () => {
           <ul className="hidden w-full flex-col items-center gap-8 px-3 py-5 bg-Primary-100 max-w-[306px] rounded-lg lg:flex">
             {tagList.map((tag) => (
               <>
-                <li
-                  className={`fs-6 font-normal whitespace-nowrap hover:scale-110 hover:transition-all hover:duration-300 ${
-                    tag === '全部文章'
-                      ? " border-b border-Primary-800"
-                      : "border-none text-Primary-600"
-                  }`}
-                  key={tag}
-                >
-                  <button type="button">
-                    {tag}
-                  </button>
-                </li>
+                <Link to="/blog" state={{ category: tag }} key={tag}>
+                  <li
+                    className={`fs-6 font-normal whitespace-nowrap hover:scale-110 hover:transition-all hover:duration-300 ${
+                      tag === "全部文章"
+                        ? " border-b border-Primary-800"
+                        : "border-none text-Primary-600"
+                    }`}
+                  >
+                    <button type="button">{tag}</button>
+                  </li>
+                </Link>
               </>
             ))}
           </ul>
