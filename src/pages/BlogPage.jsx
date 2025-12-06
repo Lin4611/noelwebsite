@@ -6,6 +6,7 @@ import article_vr_research_pic from "../assets/imgs/article-image/article-image4
 import article_team_meeting_pic from "../assets/imgs/article-image/article-image5.png";
 import article_coffee_pic from "../assets/imgs/article-image/article-image6.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const blogArticles = [
   {
     id: 1,
@@ -62,10 +63,17 @@ const blogArticles = [
       "在當今快速發展的前端開發領域中，React和Vue被廣泛認為是兩個最受歡迎和強大的前端框架之一。然而，對於開發人員來說，選擇適合自己的框架可能是一個具有挑戰性的決定。本文將從三個主要面向探討React和Vue：開發效率、性能和生態系統。通過深入比較和分析這些方面，我們將試圖回答一個關鍵問題：React和Vue中哪種前端框架更加適用？這將有助於開發人員更好地理解兩者之間的優勢和劣勢，並在實際應用中做出明智...",
   },
 ];
+const tagList = [
+  "全部文章",
+  "UI/UX 新知",
+  "數位產品設計",
+  "平面設計",
+  "前端開發",
+];
 const BlogPage = () => {
-  const [category, setCategory] = useState("all");
+  const [category, setCategory] = useState("全部文章");
   const filterBlogArticles =
-    category === "all"
+    category === "全部文章"
       ? [...blogArticles]
       : blogArticles.filter((blogarticle) => blogarticle.category === category);
   return (
@@ -77,62 +85,22 @@ const BlogPage = () => {
             不定期分享技術文章
           </p>
         </div>
-        <ul className="w-full flex items-center gap-8 px-3 py-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] bg-Primary-100 lg:hidden">
-          <li
-            className={`fs-6 font-normal whitespace-nowrap ${
-              category === "all"
-                ? " border-b border-Primary-800"
-                : "border-none text-Primary-600"
-            }`}
-          >
-            <button type="button" onClick={() => setCategory("all")}>
-              全部文章
-            </button>
-          </li>
-          <li
-            className={`fs-6 font-normal whitespace-nowrap ${
-              category === "UI/UX 新知"
-                ? " border-b border-Primary-800"
-                : "border-none text-Primary-600"
-            }`}
-          >
-            <button type="button" onClick={() => setCategory("UI/UX 新知")}>
-              UI/UX 新知
-            </button>
-          </li>
-          <li
-            className={`fs-6 font-normal whitespace-nowrap ${
-              category === "數位產品設計"
-                ? " border-b border-Primary-800"
-                : "border-none text-Primary-600"
-            }`}
-          >
-            <button type="button" onClick={() => setCategory("數位產品設計")}>
-              數位產品設計
-            </button>
-          </li>
-          <li
-            className={`fs-6 font-normal whitespace-nowrap ${
-              category === "平面設計"
-                ? " border-b border-Primary-800"
-                : "border-none text-Primary-600"
-            }`}
-          >
-            <button type="button" onClick={() => setCategory("平面設計")}>
-              平面設計
-            </button>
-          </li>
-          <li
-            className={`fs-6 font-normal whitespace-nowrap ${
-              category === "前端開發"
-                ? " border-b border-Primary-800"
-                : "border-none text-Primary-600"
-            }`}
-          >
-            <button type="button" onClick={() => setCategory("前端開發")}>
-              前端開發
-            </button>
-          </li>
+        <ul className="w-full flex items-center gap-8 px-3 py-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] bg-Primary-100 sticky top-14 sm:top-24 md:top-24 z-40 lg:hidden">
+          {tagList.map((tag) => (
+            <>
+              <li
+                className={`fs-6 font-normal whitespace-nowrap ${
+                  category === tag
+                    ? " border-b border-Primary-800"
+                    : "border-none text-Primary-600"
+                }`}
+              >
+                <button type="button" onClick={() => setCategory(tag)}>
+                  {tag}
+                </button>
+              </li>
+            </>
+          ))}
         </ul>
         <section className="w-full gap-6 flex lg:max-w-[1296px]">
           <section className="w-full flex flex-col items-center justify-center gap-10 px-[34.5px]">
@@ -140,7 +108,11 @@ const BlogPage = () => {
               <h2 className="h2-spacing text-Primary-700">此分類目前沒文章 </h2>
             ) : (
               filterBlogArticles.map((blogarticle) => (
-                <div className="w-full flex flex-col gap-4 justify-center bg-Primary-50 lg:flex-row lg:items-start lg:justify-start" key={blogarticle.id}>
+                <Link
+                  className="w-full flex flex-col gap-4 justify-center bg-Primary-50 hover:scale-110 transform-all duration-300 lg:flex-row lg:items-start lg:justify-start"
+                  key={blogarticle.id}
+                  to={`/blog/${blogarticle.id}`}
+                >
                   <img
                     src={blogarticle.imgUrl}
                     alt={blogarticle.title}
@@ -166,66 +138,26 @@ const BlogPage = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))
             )}
           </section>
           <ul className="hidden w-full flex-col items-center gap-8 px-3 py-5 bg-Primary-100 max-w-[306px] rounded-lg lg:flex">
-            <li 
-              className={`fs-6 font-normal whitespace-nowrap ${
-                category === "all"
-                  ? " border-b border-Primary-800"
-                  : "border-none text-Primary-600"
-              }`}
-            >
-              <button type="button" onClick={() => setCategory("all")}>
-                全部文章
-              </button>
-            </li>
-            <li
-              className={`fs-6 font-normal whitespace-nowrap ${
-                category === "UI/UX 新知"
-                  ? " border-b border-Primary-800"
-                  : "border-none text-Primary-600"
-              }`}
-            >
-              <button type="button" onClick={() => setCategory("UI/UX 新知")}>
-                UI/UX 新知
-              </button>
-            </li>
-            <li
-              className={`fs-6 font-normal whitespace-nowrap ${
-                category === "數位產品設計"
-                  ? " border-b border-Primary-800"
-                  : "border-none text-Primary-600"
-              }`}
-            >
-              <button type="button" onClick={() => setCategory("數位產品設計")}>
-                數位產品設計
-              </button>
-            </li>
-            <li
-              className={`fs-6 font-normal whitespace-nowrap ${
-                category === "平面設計"
-                  ? " border-b border-Primary-800"
-                  : "border-none text-Primary-600"
-              }`}
-            >
-              <button type="button" onClick={() => setCategory("平面設計")}>
-                平面設計
-              </button>
-            </li>
-            <li
-              className={`fs-6 font-normal whitespace-nowrap ${
-                category === "前端開發"
-                  ? " border-b border-Primary-800"
-                  : "border-none text-Primary-600"
-              }`}
-            >
-              <button type="button" onClick={() => setCategory("前端開發")}>
-                前端開發
-              </button>
-            </li>
+            {tagList.map((tag) => (
+              <>
+                <li
+                  className={`fs-6 font-normal whitespace-nowrap hover:scale-110 hover:transition-all hover:duration-300 ${
+                    category === tag
+                      ? " border-b border-Primary-800"
+                      : "border-none text-Primary-600"
+                  }`}
+                >
+                  <button type="button" onClick={() => setCategory(tag)}>
+                    {tag}
+                  </button>
+                </li>
+              </>
+            ))}
           </ul>
         </section>
       </main>
