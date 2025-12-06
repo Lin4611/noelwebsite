@@ -225,7 +225,7 @@ const BlogContentPage = () => {
           <div className="w-full grid grid-cols-1 gap-10 place-items-center md:grid-cols-2 lg:grid-cols-2 lg:max-w-[856px] md:gap-4 lg:gap-4">
             {blogArticles.map((blogarticle) => (
               <div
-                className="w-full flex flex-col gap-4 justify-center bg-Primary-50 items-center"
+                className="w-full flex flex-col gap-4 justify-center bg-Primary-50 items-center hover:scale-105 transform-all duration-300"
                 key={blogarticle.id}
               >
                 <img
