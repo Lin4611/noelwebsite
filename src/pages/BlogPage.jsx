@@ -85,7 +85,7 @@ const BlogPage = () => {
             不定期分享技術文章
           </p>
         </div>
-        <ul className="w-full flex items-center gap-8 px-3 py-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] bg-Primary-100 sticky top-14 z-40 lg:hidden">
+        <ul className="w-full flex items-center gap-8 px-3 py-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] bg-Primary-100 sticky top-14 sm:top-24 md:top-24 z-40 lg:hidden">
           {tagList.map((tag) => (
             <>
               <li
