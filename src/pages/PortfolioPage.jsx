@@ -58,6 +58,7 @@ function PortfolioPage() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
+    <main>
       <section className="w-full bg-Primary-100">
         <div
           className="
@@ -120,7 +121,7 @@ function PortfolioPage() {
             </div>
           </div>
 
-          <div className="mt-10 xl:mt-[83px]">
+          <div className="mt-10 lg:mt-[83px]">
             <div className="relative mx-auto max-w-[235px] lg:max-w-[636px] ">
               <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 text-center">
                 <div className="text-center text-Primary-700 flex-col items-center">
@@ -195,7 +196,7 @@ function PortfolioPage() {
               </article>
             ))}
           </div>
-          <div class="flex gap-4 justify-center">
+          <div className="flex gap-4 justify-center">
             <button className="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-800 text-Primary-50 xl:hover:scale-110">
               1
             </button>
@@ -224,6 +225,7 @@ function PortfolioPage() {
           <ArticlePopup isOpen={isOpen} onClose={() => setIsOpen(false)} />
         </div>
       </section>
+      </main>
     </>
   );
 }
