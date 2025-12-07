@@ -196,13 +196,13 @@ function PortfolioPage() {
             ))}
           </div>
           <div class="flex gap-4 justify-center">
-            <button class="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-800 text-Primary-50 xl:hover:scale-110">
+            <button className="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-800 text-Primary-50 xl:hover:scale-110">
               1
             </button>
-            <button class="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-50 text-Primary-700 xl:hover:scale-110">
+            <button className="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-50 text-Primary-700 xl:hover:scale-110">
               2
             </button>
-            <button class="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-50 text-Primary-700 xl:hover:scale-110">
+            <button className="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-50 text-Primary-700 xl:hover:scale-110">
               3
             </button>
           </div>
