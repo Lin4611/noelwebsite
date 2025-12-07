@@ -153,7 +153,7 @@ function Header() {
 
 function NavItem({ label, active, onClick }) {
   return (
-    <a type="button" onClick={onClick} className="relative fs-6-regular text-Primary-900 hover:scale-110">
+    <button type="button" onClick={onClick} className="relative fs-6-regular text-Primary-900 hover:scale-110">
       <span className={active ? "fs-6" : ""}>{label}</span>
 
       {active && (
@@ -164,7 +164,7 @@ function NavItem({ label, active, onClick }) {
           <span className="absolute -bottom-1 -right-2 w-2 h-2 border-b border-r border-gray-500" />
         </>
       )}
-    </a>
+    </button>
   );
 }
 
