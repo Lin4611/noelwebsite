@@ -1,16 +1,31 @@
-# React + Vite
+@'
+# Noel Website (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 專案功能摘要
+- **用途**: 一個以 React 與 Vite 建置的個人作品 / 作品集展示網站範例，包含首頁、作品集、服務、部落格列表與文章內容頁。
+- **特性**: 多頁面路由、作品卡片與 modal 詳細視窗、共用元件（Header、Footer、SectionTitle、ArticlePopup）、響應式導覽與圖像資源管理。
+- **技術棧**: React, Vite, React Router（hash routing）、專案內 CSS（`src/styles`）。
 
-Currently, two official plugins are available:
+## 專案架構
+- 根目錄:
+  - `index.html`：應用入口 HTML。
+  - `vite.config.js`：Vite 設定。
+  - `package.json`：npm 指令與相依套件。
+- `public/`：靜態資源（若有）。
+- `src/`：
+  - `App.jsx`、`main.jsx`、`assets/`、`components/`、`pages/`、`router/`、`styles/` 等。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 主要模組說明
+- `src/main.jsx`：應用啟動與 Router 初始化。
+- `src/router/WebRouter.jsx`：路由表（/, /portfolio, /services, /blog, /blog/:id）。
+- `src/components/Header.jsx`：導覽。
+- `src/components/Footer.jsx`：頁尾。
+- `src/pages/PortfolioPage.jsx`：作品清單與 `ArticlePopup`。
+- `src/components/ArticlePopup.jsx`：作品詳情 modal。
+- `src/components/SectionTitle.jsx`：區段標題元件。
+- `src/styles/`：樣式與共用變數。
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 安裝方式
+```powershell
+npm install
+npm run dev

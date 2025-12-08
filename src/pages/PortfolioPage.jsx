@@ -58,6 +58,7 @@ function PortfolioPage() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
+    <main>
       <section className="w-full bg-Primary-100">
         <div
           className="
@@ -65,8 +66,7 @@ function PortfolioPage() {
             max-w-[840px] lg:max-w-[670px]  
             mx-auto px-3
             py-12 lg:py-24
-            pt-30"
-        >
+            pt-30">
           <img
             src={quoteLeft}
             alt=""
@@ -77,8 +77,7 @@ function PortfolioPage() {
             src={quoteRight}
             alt=""
             aria-hidden
-            className="hidden lg:block absolute bottom-55 right-16 w-16 h-16"
-          />
+            className="hidden lg:block absolute bottom-55 right-16 w-16 h-16"/>
 
           <div className="w-full flex justify-center">
             <div className="max-w-[300px] lg:max-w-[670px] text-center lg:text-center text-Primary-700">
@@ -95,8 +94,7 @@ function PortfolioPage() {
                       absolute left-0 bottom-0
                       w-full
                       scale-x-120 scale-y-130
-                      -translate-y-1"
-                  />
+                      -translate-y-1"/>
                 </span>
               </p>
 
@@ -113,14 +111,13 @@ function PortfolioPage() {
                       absolute left-0 bottom-0
                       w-full
                       scale-x-120 scale-y-130
-                      -translate-y-1"
-                  />
+                      -translate-y-1"/>
                 </span>
               </p>
             </div>
           </div>
 
-          <div className="mt-10 xl:mt-[83px]">
+          <div className="mt-10 lg:mt-[83px]">
             <div className="relative mx-auto max-w-[235px] lg:max-w-[636px] ">
               <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 text-center">
                 <div className="text-center text-Primary-700 flex-col items-center">
@@ -156,22 +153,19 @@ function PortfolioPage() {
         <div className="max-w-[1296px] mx-auto px-3 pt-20 pb-12 xl:pt-30 xl:px-0 xl:pb-30">
           <div
             className="
-                grid grid-cols-1 gap-12 pb-10 xl:pb-18 md:gap-6 md:grid-cols-2"
-          >
+                grid grid-cols-1 gap-12 pb-10 xl:pb-18 md:gap-6 md:grid-cols-2">
             {portfolioArticles.map((work) => (
               <article
                 key={work.id}
                 className="w-full bg-Primary-50  overflow-hidden mx-auto hover:scale-105 hover:cursor-pointer"
-                onClick={() => setIsOpen(!isOpen)}
-              >
+                onClick={() => setIsOpen(!isOpen)}>
                 <img
                   src={work.imgUrl}
                   alt={work.title}
                   className="
                     w-full object-cover rounded-sm md:rounded-l-lg
                     aspect-351/224  
-                    md:aspect-636/400 "
-                />
+                    md:aspect-636/400 "/>
 
                 <div className="px-4 pt-4 ">
                   <h3 className="h5  text-Primary-700 mb-2 md:h3">
@@ -195,14 +189,14 @@ function PortfolioPage() {
               </article>
             ))}
           </div>
-          <div class="flex gap-4 justify-center">
-            <button class="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-800 text-Primary-50 xl:hover:scale-110">
+          <div className="flex gap-4 justify-center">
+            <button className="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-800 text-Primary-50 xl:hover:scale-110">
               1
             </button>
-            <button class="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-50 text-Primary-700 xl:hover:scale-110">
+            <button className="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-50 text-Primary-700 xl:hover:scale-110">
               2
             </button>
-            <button class="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-50 text-Primary-700 xl:hover:scale-110">
+            <button className="fs-4 w-10 h-10 flex items-center justify-center rounded-sm bg-Primary-50 text-Primary-700 xl:hover:scale-110">
               3
             </button>
           </div>
@@ -224,6 +218,7 @@ function PortfolioPage() {
           <ArticlePopup isOpen={isOpen} onClose={() => setIsOpen(false)} />
         </div>
       </section>
+      </main>
     </>
   );
 }

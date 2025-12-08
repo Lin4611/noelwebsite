@@ -1,3 +1,4 @@
+import React from "react";
 import SectionTitle from "../components/SectionTitle";
 import visual_design_icon from "../assets/imgs/icon/service-item-visual.svg";
 import ui_icon from "../assets/imgs/icon/service-item-ui.svg";
@@ -11,7 +12,6 @@ import casePos from "../assets/imgs/work-image/work-image4.png";
 import caseBrandSite from "../assets/imgs/work-image/work-image5.png";
 import caseMovie from "../assets/imgs/work-image/work-image6.png";
 import caseOrange from "../assets/imgs/work-image/work-image7.png";
-
 const servicesArray = [
   { id: 1, title: "平面設計", iconUrl: visual_design_icon },
   { id: 2, title: "UI 設計", iconUrl: ui_icon },
@@ -133,14 +133,11 @@ const ServicesPage = () => {
         <section
           className={`w-full flex flex-col py-20 items-center justify-center gap-10 ${process_bg} lg:py-30`}
         >
-          <SectionTitle title={"服務流程"} fontColor="text-Primary-50" />
+          <SectionTitle title={"服務流程"} fontColor="text-Primary-50" iconColor="text-Primary-50" />
           <div className="w-full grid grid-cols-1 place-items-center gap-4 px-3 md:max-w-[655px] lg:max-w-[655px]">
             {processArray.map((process) => (
-              <>
-                <div
-                  className="w-full flex flex-col items-center justify-center bg-Primary-700 border border-Primary-500 pt-6 pb-12 px-6 gap-2 md:px-8 md:py-6 md:gap-8 md:flex-row lg:px-8 lg:py-6 lg:gap-8 lg:flex-row"
-                  key={process.id}
-                >
+              <React.Fragment key={process.id}>
+                <div className="w-full flex flex-col items-center justify-center bg-Primary-700 border border-Primary-500 pt-6 pb-12 px-6 gap-2 md:px-8 md:py-6 md:gap-8 md:flex-row lg:px-8 lg:py-6 lg:gap-8 lg:flex-row">
                   <h2 className="number-sm text-Primary-500 md:number-lg lg:number-lg">
                     {process.id}
                   </h2>
@@ -160,7 +157,7 @@ const ServicesPage = () => {
                     className="w-8 h-auto aspect-square"
                   />
                 )}
-              </>
+              </React.Fragment>
             ))}
           </div>
         </section>

@@ -1,34 +1,15 @@
-import deco_left_sm from "../assets/imgs/icon/title deco-left-sm.svg";
-import deco_right_sm from "../assets/imgs/icon/title deco-right-sm.svg";
-import deco_left_lg from "../assets/imgs/icon/title deco-left-lg.svg";
-import deco_right_lg from "../assets/imgs/icon/title deco-right-lg.svg";
-const SectionTitle = ({ title,fontColor="text-Primary-700" }) => {
+import {TitleDecoLeftLg,TitleDecoRightLg,TitleDecoLeftSm,TitleDecoRightSm} from "../components/svg-icons/SectionTitleIcon"
+const SectionTitle = ({ title,fontColor="text-Primary-700",iconColor="text-Primary-400" }) => {
   return (
     <>
       <div className="w-full flex justify-center items-center gap-4">
-        <img
-          src={deco_left_sm}
-          alt="services"
-          className="w-14 h-1.5 object-cover block md:hidden lg:hidden"
-        />
-        <img
-          src={deco_left_lg}
-          alt="services"
-          className="w-25 h-1.5 object-cover hidden md:block lg:block"
-        />
+        <TitleDecoLeftSm className={`w-14 h-1.5 object-cover block ${iconColor} md:hidden lg:hidden `}/>
+        <TitleDecoLeftLg className={`w-25 h-1.5 object-cover hidden ${iconColor} md:block lg:block`}/>
         <h2 className={`h4-bold-spacing ${fontColor} md:h2-spacing lg:h2-spacing lg:font-semibold`}>
           {title}
         </h2>
-        <img
-          src={deco_right_sm}
-          alt="services"
-          className="w-14 h-1.5 object-cover block md:hidden lg:hidden"
-        />
-        <img
-          src={deco_right_lg}
-          alt="services"
-          className="w-25 h-1.5 object-cover hidden md:block lg:block"
-        />
+        <TitleDecoRightSm className={`w-14 h-1.5 object-cover block ${iconColor} md:hidden lg:hidden`} />
+        <TitleDecoRightLg className={`w-25 h-1.5 object-cover hidden ${iconColor} md:block lg:block`}/>
       </div>
     </>
   );
