@@ -133,7 +133,7 @@ const ServicesPage = () => {
         <section
           className={`w-full flex flex-col py-20 items-center justify-center gap-10 ${process_bg} lg:py-30`}
         >
-          <SectionTitle title={"服務流程"} fontColor="text-Primary-50" />
+          <SectionTitle title={"服務流程"} fontColor="text-Primary-50" iconColor="text-Primary-50" />
           <div className="w-full grid grid-cols-1 place-items-center gap-4 px-3 md:max-w-[655px] lg:max-w-[655px]">
             {processArray.map((process) => (
               <React.Fragment key={process.id}>
