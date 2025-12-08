@@ -32,7 +32,7 @@ const BlogContentPage = () => {
   return (
     <>
       <main className="w-full mx-auto pb-20 flex flex-col items-center justify-center gap-10 px-3 lg:px-10">
-        <ul className="w-full flex items-center gap-8 px-3 py-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] bg-Primary-100 sticky top-14 z-40 sm:top-24 md:top-24 lg:hidden">
+        <ul className="w-full flex items-center gap-8 px-3 py-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] bg-Primary-100 sticky top-14 z-20 sm:top-24 md:top-24 lg:hidden">
           {tagList.map((tag) => (
             <Link to="/blog" key={tag}>
               <li
