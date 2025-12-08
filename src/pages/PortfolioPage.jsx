@@ -66,8 +66,7 @@ function PortfolioPage() {
             max-w-[840px] lg:max-w-[670px]  
             mx-auto px-3
             py-12 lg:py-24
-            pt-30"
-        >
+            pt-30">
           <img
             src={quoteLeft}
             alt=""
@@ -78,8 +77,7 @@ function PortfolioPage() {
             src={quoteRight}
             alt=""
             aria-hidden
-            className="hidden lg:block absolute bottom-55 right-16 w-16 h-16"
-          />
+            className="hidden lg:block absolute bottom-55 right-16 w-16 h-16"/>
 
           <div className="w-full flex justify-center">
             <div className="max-w-[300px] lg:max-w-[670px] text-center lg:text-center text-Primary-700">
@@ -96,8 +94,7 @@ function PortfolioPage() {
                       absolute left-0 bottom-0
                       w-full
                       scale-x-120 scale-y-130
-                      -translate-y-1"
-                  />
+                      -translate-y-1"/>
                 </span>
               </p>
 
@@ -114,8 +111,7 @@ function PortfolioPage() {
                       absolute left-0 bottom-0
                       w-full
                       scale-x-120 scale-y-130
-                      -translate-y-1"
-                  />
+                      -translate-y-1"/>
                 </span>
               </p>
             </div>
@@ -157,22 +153,19 @@ function PortfolioPage() {
         <div className="max-w-[1296px] mx-auto px-3 pt-20 pb-12 xl:pt-30 xl:px-0 xl:pb-30">
           <div
             className="
-                grid grid-cols-1 gap-12 pb-10 xl:pb-18 md:gap-6 md:grid-cols-2"
-          >
+                grid grid-cols-1 gap-12 pb-10 xl:pb-18 md:gap-6 md:grid-cols-2">
             {portfolioArticles.map((work) => (
               <article
                 key={work.id}
                 className="w-full bg-Primary-50  overflow-hidden mx-auto hover:scale-105 hover:cursor-pointer"
-                onClick={() => setIsOpen(!isOpen)}
-              >
+                onClick={() => setIsOpen(!isOpen)}>
                 <img
                   src={work.imgUrl}
                   alt={work.title}
                   className="
                     w-full object-cover rounded-sm md:rounded-l-lg
                     aspect-351/224  
-                    md:aspect-636/400 "
-                />
+                    md:aspect-636/400 "/>
 
                 <div className="px-4 pt-4 ">
                   <h3 className="h5  text-Primary-700 mb-2 md:h3">
